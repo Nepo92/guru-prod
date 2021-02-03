@@ -19,23 +19,23 @@
     <link th:href="@{/css/comment-block.css}" rel="stylesheet">
     <link th:href="@{/css/main-nav.css}" rel="stylesheet"> -->
 
-  <link rel="stylesheet" href="./css/u_main.css">
-  <link rel="stylesheet" href="./css/gap.css">
-  <link rel="stylesheet" href="./css/custom-scroll.css">
-  <link rel="stylesheet" href="./css/available-course.css">
-  <link rel="stylesheet" href="./css/info-blocks.css">
-  <link rel="stylesheet" href="./css/progress-bar.css">
-  <link rel="stylesheet" href="./css/btn.css">
-  <link rel="stylesheet" href="./css/gallery-block.css">
-  <link rel="stylesheet" href="./css/cooment-block.css">
-  <link rel="stylesheet" href="./css/main-nav.css">
-  <link rel="stylesheet" href="./css/gallery-block.css">
-  <link rel="stylesheet" href="./css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="../css/u_main.css">
+  <link rel="stylesheet" href="../css/gap.css">
+  <link rel="stylesheet" href="../css/custom-scroll.css">
+  <link rel="stylesheet" href="../css/available-course.css">
+  <link rel="stylesheet" href="../css/info-blocks.css">
+  <link rel="stylesheet" href="../css/progress-bar.css">
+  <link rel="stylesheet" href="../css/btn.css">
+  <link rel="stylesheet" href="../css/gallery-block.css">
+  <link rel="stylesheet" href="../css/cooment-block.css">
+  <link rel="stylesheet" href="../css/main-nav.css">
+  <link rel="stylesheet" href="../css/gallery-block.css">
+  <link rel="stylesheet" href="../css/jquery.fancybox.min.css">
 
   <!-- Мои CSS -->
 
-  <link rel="stylesheet" href="./css/blocks/menu.css">
-  <link rel="stylesheet" href="./css/blocks/u_lesson.css">
+  <link rel="stylesheet" href="../css/blocks/menu.css">
+  <link rel="stylesheet" href="../css/blocks/u_lesson.css">
 
 
 </head>
@@ -56,7 +56,7 @@
         <span class="menu__text">Меню</span>
       </div>
 
-      <img class="menu__avatar" src="./img/menu/image13.png" alt="avatar">
+      <img class="menu__avatar" src="../img/menu/image13.png" alt="avatar">
     </div>
 
     <nav class="nav">
@@ -83,7 +83,7 @@
         </li>
         <li class="nav__item">
           <a class="nav__link" href="#">
-            <img class="nav__avatar" src="./img/menu/image13.png" alt="avatar">
+            <img class="nav__avatar" src="../img/menu/image13.png" alt="avatar">
             <span>Василиса Петрова</span>
           </a>
         </li>
@@ -181,7 +181,7 @@
                           <!-- <img
                             th:src="'//img.youtube.com/vi/' + ${#strings.substring(lessonBlock.value, #strings.indexOf(lessonBlock.value, '.be/') + 4, #strings.length(lessonBlock.value))} + '/mqdefault.jpg'"
                             class="content-video__preview" alt=""> -->
-                          <img class="content-video__preview" src="./img/lessons/video.png" alt="video">
+                          <img class="content-video__preview" src="../img/lessons/video.png" alt="video">
                         </a>
                       </div>
                     </div>
@@ -351,7 +351,7 @@
                       <div class="content-element__image-wrapper">
                         <a data-fancybox th:href="'/' + ${lessonBlock.value}" class="content-image">
                           <img th:src="'/' + ${lessonBlock.value}" alt="">
-                          <img src="./img/lessons/photoLesson.png" alt="photoLessons">
+                          <img src="../img/lessons/photoLesson.png" alt="photoLessons">
                         </a>
                       </div>
                     </div>
@@ -386,7 +386,7 @@
                                   <a data-fancybox th:href="'/' + ${img.value}" class="gallery-item">
                                     <div class="gallery-item__preview"
                                       th:style="'background-image: url(/' + ${img.value} + ');'">
-                                      <img src="./img/lessons/photoLesson.png" alt="photo">
+                                      <img src="../img/lessons/photoLesson.png" alt="photo">
                                     </div>
                                   </a>
                                 </div>
@@ -695,13 +695,13 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<script src="./js/main.js"></script>
-<script src="./js/jquery.fancybox.min.js"></script>
-<script src="./js/progress-bar.js"></script>
-<script src="./js/lesson-vote.js"></script>
-<script src="./js/upload-item-files.js"></script>
-<script src="./js/homework.js"></script>
-<script src="./js/app.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/jquery.fancybox.min.js"></script>
+<script src="../js/progress-bar.js"></script>
+<script src="../js/lesson-vote.js"></script>
+<script src="../js/upload-item-files.js"></script>
+<script src="../js/homework.js"></script>
+<script src="../js/app.js"></script>
 
 <!-- <th:block th:insert="base :: jquery" />
 <script th:src="@{/js/main.js}"></script>
