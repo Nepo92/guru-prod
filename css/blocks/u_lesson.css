@@ -226,19 +226,6 @@
   padding: 0 20px 11px;
 }
 
-.content-element:nth-child(2) .content-element__text-wrapper {
-  display: none;
-  margin: 0;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  word-wrap: normal;
-  overflow: hidden;
-}
-
 .content-element:nth-child(2) .content-element__title {
   display: inline-block;
   -webkit-transform: translate(0, 0);
@@ -421,26 +408,6 @@
   padding: 24px 16px 36px 10px;
 }
 
-.btn_title-dislike {
-  position: relative;
-  z-index: 1;
-  display: block;
-  margin: 0 auto;
-  width: 25px;
-  height: 25px;
-  fill: #ff284f;
-  right: 0%;
-  top: 2px;
-}
-
-.btn_title-like {
-  position: relative;
-  z-index: 1;
-  width: 25px;
-  height: 25px;
-  fill: #27ae60;
-}
-
 .dislike {
   position: relative;
   width: 100%;
@@ -466,6 +433,9 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .dislike .block-header {
@@ -476,6 +446,22 @@
 
 .dislike .block-header .title {
   font-size: 32px;
+}
+
+.btn__icon_like::after {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-140%);
+  -ms-transform: translateY(-140%);
+  transform: translateY(-140%);
+}
+
+.btn__icon_dislike::after {
+  position: relative;
+  top: 0%;
+  -webkit-transform: translateY(-80%);
+  -ms-transform: translateY(-80%);
+  transform: translateY(-80%);
 }
 
 .like {
@@ -994,16 +980,6 @@
 
 .send:hover .btn__title .btn_title-text {
   color: #481E8C !important;
-}
-
-.content-element__text-wrapper {
-  word-wrap: wrap;
-}
-
-.content-element__text-wrapper {
-  border: 1px solid;
-  width: 100%;
-  overflow: visible;
 }
 
 @media (min-width: 375px) {

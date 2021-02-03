@@ -10,7 +10,3 @@ menuItems.forEach((item) => {
     item.classList.add('active');
   });
 });
-
-const menu = document.querySelector('.menu');
-
-menu.style.zIndex = '2';
