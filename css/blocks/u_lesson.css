@@ -996,11 +996,6 @@
   color: #481E8C !important;
 }
 
-.content-element__text-wrapper {
-  word-wrap: wrap;
-  border: 1px solid;
-}
-
 @media (min-width: 375px) {
   .header__item h3 {
     margin-top: 42px;
