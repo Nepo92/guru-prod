@@ -711,9 +711,9 @@
   }
   .available-course__image img {
     width: 420px;
-    -webkit-transform: translate(0, -108px);
-    -ms-transform: translate(0, -108px);
-    transform: translate(0, -108px);
+    -webkit-transform: translate(-100px, -108px);
+    -ms-transform: translate(-100px, -108px);
+    transform: translate(-100px, -108px);
   }
   .available-course__info .info-blocks__wrapper .info-block {
     font-weight: 500;
