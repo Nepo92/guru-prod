@@ -1,0 +1,171 @@
+<html lang="ru" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Мои курсы">
+
+<title>Мои курсы</title>
+
+<!-- <link th:href="@{/css/u_main.css}" rel="stylesheet">
+    <link th:href="@{/css/gap.css}" rel="stylesheet">
+    <link th:href="@{/css/custom-tabs.css}" rel="stylesheet">
+    <link th:href="@{/css/available-course.css}" rel="stylesheet">
+    <link th:href="@{/css/info-blocks.css}" rel="stylesheet">
+    <link th:href="@{/css/progress-bar.css}" rel="stylesheet">
+    <link th:href="@{/css/btn.css}" rel="stylesheet">
+    <link th:href="@{/css/main-nav.css}" rel="stylesheet"> -->
+
+<link href="../css/u_main.css" rel="stylesheet">
+ <link href="../css/gap.css" rel="stylesheet">
+<link href="../css/custom-tabs.css" rel="stylesheet">
+<link href="../css/available-course.css" rel="stylesheet">
+<link href="../css/info-blocks.css" rel="stylesheet">
+<link href="../css/progress-bar.css" rel="stylesheet">
+<link href="../css/btn.css" rel="stylesheet">
+<link href="../css/main-nav.css" rel="stylesheet">
+
+<!-- Мои CSS -->
+
+<link rel="stylesheet" href="../css/blocks/u_courses.css">
+<link rel="stylesheet" href="../css/blocks/menu.css">
+</head>
+
+<body class="body">
+  <div th:replace="base :: user-nav"></div>
+  <div th:replace="base :: user-mobile-nav"></div>
+
+
+  <div class="menu">
+    <input id="menu__checkbox" class="menu__checkbox" type="checkbox">
+
+    <div class="menu__inner">
+    
+      <div class="menu__control">
+        <label class="menu__button burger" for="menu__checkbox">
+          <span class="burger__row"></span>
+        </label>
+  
+        <span class="menu__text">Меню</span>  
+      </div>
+
+      <img class="menu__avatar" src="../img/menu/image13.png" alt="avatar">
+    </div>
+
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item active">
+          <a class="nav__link" href="#1">
+            <svg class="nav__icon">
+              <use xlink:href="sprite.svg#menu--courses"></use>
+            </svg>
+            <span>Мои курсы</span>
+          </a>
+        </li>
+        <li class="nav__item">
+
+          <a class="nav__link" href="#1">
+            <svg class="nav__icon">
+              <use xlink:href="sprite.svg#menu--cart"></use>
+            </svg>
+            <div class="nav__text">
+              Магазин курсов
+              <p>в разработке</p>
+            </div>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#">
+            <img class="nav__avatar" src="../img/menu/image13.png" alt="avatar">
+            <span>Василиса Петрова</span>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#1">
+            <svg class="nav__icon">
+              <use xlink:href="sprite.svg#menu--logout"></use>
+            </svg>
+            <span>Выйти из аккаунта</span>
+          </a>
+        </li>
+      </ul>
+
+    </nav>
+  </div>
+
+  <div class="body__wrapper">
+
+
+
+    <div class="body__header">
+
+      <header class="header">
+        <div class="header__box block">
+          <div class="header__wrapper block-wrapper">
+            <div class="header__main">
+              <div class="header__items">
+                <div class="header__items-wrapper">
+                  <div class="header__item header__item_title">
+                    <h3>Мои курсы</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+    </div>
+    <div class="body__content">
+      
+      <div class="available-courses block -gap-inner-bottom_5 -gap-inner-top_5">
+        <div class="available-courses__wrapper block-wrapper">
+          <div class="available-courses__main">
+            <div class="-gap_3">
+              <div class="tabs tabs_underline">
+                <div class="tabs__wrapper">
+                  <div class="tabs__list">
+                    <th:block th:each="project, stat : ${projectCourses}">
+                      <div class="tabs__item">
+                        <a js-tabby-tab href="#" class="tabs-item" th:attr="data-tabby='c:' + ${stat.index}"
+                          th:classappend="${stat.index == 0 ? 'is-open' : ''}">
+                          <div class="tabs-item__title" th:utext="${project.name}"></div>
+                        </a>
+                      </div>
+                    </th:block>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tabs-animated">
+              <th:block th:each="project, stat : ${projectCourses}">
+                <div js-tabby-panel class="tabs-panel " th:attr="data-tabby='c:' + ${stat.index}"
+                  th:classappend="${stat.index == 0 ? 'is-open' : ''}">
+                  <div class="tabs-panel-transform">
+                    <div class="available-courses__list">
+                      <th:block th:each="course, st : ${project.courses}">
+                        
+                      </th:block>
+                    </div>
+                  </div>
+                </div>
+              </th:block>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="../js/_tabby.js"></script>
+<script src="../js/tabs.js"></script>
+<script src="../js/progress-bar.js"></script>
+<script src="../js/app.js"></script>
+<!-- <th:block th:insert="base :: jquery" />
+<script th:src="@{/js/_tabby.js}"></script>
+<script th:src="@{/js/tabs.js}"></script>
+<script th:src="@{/js/progress-bar.js}"></script> -->
+
+</html>
