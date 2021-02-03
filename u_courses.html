@@ -15,19 +15,19 @@
     <link th:href="@{/css/btn.css}" rel="stylesheet">
     <link th:href="@{/css/main-nav.css}" rel="stylesheet"> -->
 
-<link href="./css/u_main.css" rel="stylesheet">
- <link href="./css/gap.css" rel="stylesheet">
-<link href="./css/custom-tabs.css" rel="stylesheet">
-<link href="./css/available-course.css" rel="stylesheet">
-<link href="./css/info-blocks.css" rel="stylesheet">
-<link href="./css/progress-bar.css" rel="stylesheet">
-<link href="./css/btn.css" rel="stylesheet">
-<link href="./css/main-nav.css" rel="stylesheet">
+<link href="../css/u_main.css" rel="stylesheet">
+ <link href="../css/gap.css" rel="stylesheet">
+<link href="../css/custom-tabs.css" rel="stylesheet">
+<link href="../css/available-course.css" rel="stylesheet">
+<link href="../css/info-blocks.css" rel="stylesheet">
+<link href="../css/progress-bar.css" rel="stylesheet">
+<link href="../css/btn.css" rel="stylesheet">
+<link href="../css/main-nav.css" rel="stylesheet">
 
 <!-- Мои CSS -->
 
-<link rel="stylesheet" href="./css/blocks/u_courses.css">
-<link rel="stylesheet" href="./css/blocks/menu.css">
+<link rel="stylesheet" href="../css/blocks/u_courses.css">
+<link rel="stylesheet" href="../css/blocks/menu.css">
 </head>
 
 <body class="body">
@@ -48,7 +48,7 @@
         <span class="menu__text">Меню</span>  
       </div>
 
-      <img class="menu__avatar" src="./img/menu/image13.png" alt="avatar">
+      <img class="menu__avatar" src="../img/menu/image13.png" alt="avatar">
     </div>
 
     <nav class="nav">
@@ -75,7 +75,7 @@
         </li>
         <li class="nav__item">
           <a class="nav__link" href="#">
-            <img class="nav__avatar" src="./img/menu/image13.png" alt="avatar">
+            <img class="nav__avatar" src="../img/menu/image13.png" alt="avatar">
             <span>Василиса Петрова</span>
           </a>
         </li>
@@ -154,6 +154,9 @@
                                       <div class="info-blocks">
                                           <div class="info-blocks__wrapper">
                                               <div class="info-block info-block_icon info-block_icon_play">
+                                                <svg class="info-block__icon">
+                                                  <use xlink:href="sprite.svg#available-course--start"></use>
+                                                </svg>
                                                   <span class="info-block__text info-block__text_big" th:utext="${course.startDate}"></span>
                                               </div>
                                               <div class="info-block">
@@ -162,12 +165,14 @@
                                           </div>
                                       </div>
 
-                                      <img src="./img/available-course/SweetsAcademy.png" alt="SweetsAcademy">
+                                      <img src="./img/available-course/SweetsAcademy.png" alt="sweetsAcademy">
+
                                   </div>
                                   <div class="available-course__title -gap_2" th:utext="${course.name}"></div>
                                   <div class="available-course__type -gap_3">
                                       <div class="outline-text">
                                           <div class="outline-text__content outline-text__content_dark">
+                                  
                                               <div class="outline-text__text" th:utext="${course.type}"></div>
                                           </div>
                                       </div>
@@ -189,12 +194,21 @@
                                       <div class="info-blocks">
                                           <div class="info-blocks__wrapper">
                                               <div class="info-block info-block_icon info-block_icon_module">
+                                                <svg class="info-block__icon">
+                                                  <use xlink:href="sprite.svg#available-course--lessons"></use>
+                                                </svg>
                                                   <span class="info-block__text" th:utext="${course.modulesCount} + ' модулей'"></span>
                                               </div>
                                               <div class="info-block info-block_icon info-block_icon_video">
+                                                <svg class="info-block__icon">
+                                                  <use xlink:href="sprite.svg#available-course--video-lesson"></use>
+                                                </svg>
                                                   <span class="info-block__text" th:utext="${course.lessonsCount} + ' урок'"></span>
                                               </div>
                                               <div class="info-block info-block_icon info-block_icon_work">
+                                                <svg class="info-block__icon">
+                                                  <use xlink:href="sprite.svg#available-course--homework"></use>
+                                                </svg>
                                                   <span class="info-block__text" th:utext="${course.homeworkCount} + ' домашнее задание'"></span>
                                               </div>
                                           </div>
@@ -203,7 +217,7 @@
                               </div>
                               <div class="available-course__side">
                                   <div class="available-course__image">
-                                      <img src="./img/available-course/bg.png" alt="bg">
+                                      <img src="/img/available-course/bg.png" alt="bg">
                                   </div>
                               </div>
                           </div>
@@ -223,10 +237,10 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<script src="./js/_tabby.js"></script>
-<script src="./js/tabs.js"></script>
-<script src="./js/progress-bar.js"></script>
-<script src="./js/app.js"></script>
+<script src="../js/_tabby.js"></script>
+<script src="../js/tabs.js"></script>
+<script src="../js/progress-bar.js"></script>
+<!-- <script src="../js/app.js"></script> -->
 <!-- <th:block th:insert="base :: jquery" />
 <script th:src="@{/js/_tabby.js}"></script>
 <script th:src="@{/js/tabs.js}"></script>
