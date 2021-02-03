@@ -501,9 +501,9 @@
   }
   .available-course__image {
     position: absolute;
-    -webkit-transform: translateY(-108px);
-    -ms-transform: translateY(-108px);
-    transform: translateY(-108px);
+    -webkit-transform: translateY(-96px);
+    -ms-transform: translateY(-96px);
+    transform: translateY(-96px);
     bottom: 0;
     width: 420px;
     min-height: 147px;
@@ -520,6 +520,18 @@
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 520px) {
+  .available-course {
+    overflow: hidden;
+  }
+  .available-course__image {
+    position: absolute;
+    -webkit-transform: translateY(-108px);
+    -ms-transform: translateY(-108px);
+    transform: translateY(-108px);
   }
 }
 
@@ -794,19 +806,15 @@
     white-space: nowrap;
   }
   .available-course__side {
-    border: 1px solid;
     -webkit-transform: translate(-150px);
     -ms-transform: translate(-150px);
     transform: translate(-150px);
   }
-  .available-course__image {
-    border: 1px solid;
-  }
   .available-course__image img {
     width: 420px;
-    -webkit-transform: translate(0, -120px);
-    -ms-transform: translate(0, -120px);
-    transform: translate(0, -120px);
-    border: 1px solid;
+    -webkit-transform: translate(0, -90px);
+    -ms-transform: translate(0, -90px);
+    transform: translate(0, -90px);
+    left: 0;
   }
 }

@@ -1,7 +1,7 @@
 <html lang="ru" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <meta charset="utf-8">
-<!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Мои курсы">
 
 <title>Мои курсы</title>
@@ -15,19 +15,19 @@
     <link th:href="@{/css/btn.css}" rel="stylesheet">
     <link th:href="@{/css/main-nav.css}" rel="stylesheet"> -->
 
-<link href="../css/u_main.css" rel="stylesheet">
- <link href="../css/gap.css" rel="stylesheet">
-<link href="../css/custom-tabs.css" rel="stylesheet">
-<link href="../css/available-course.css" rel="stylesheet">
-<link href="../css/info-blocks.css" rel="stylesheet">
-<link href="../css/progress-bar.css" rel="stylesheet">
-<link href="../css/btn.css" rel="stylesheet">
-<link href="../css/main-nav.css" rel="stylesheet">
+<link href="./css/u_main.css" rel="stylesheet">
+ <link href="./css/gap.css" rel="stylesheet">
+<link href="./css/custom-tabs.css" rel="stylesheet">
+<link href="./css/available-course.css" rel="stylesheet">
+<link href="./css/info-blocks.css" rel="stylesheet">
+<link href="./css/progress-bar.css" rel="stylesheet">
+<link href="./css/btn.css" rel="stylesheet">
+<link href="./css/main-nav.css" rel="stylesheet">
 
 <!-- Мои CSS -->
 
-<link rel="stylesheet" href="../css/blocks/u_courses.css">
-<link rel="stylesheet" href="../css/blocks/menu.css">
+<link rel="stylesheet" href="./css/blocks/u_courses.css">
+<link rel="stylesheet" href="./css/blocks/menu.css">
 </head>
 
 <body class="body">
@@ -48,7 +48,7 @@
         <span class="menu__text">Меню</span>  
       </div>
 
-      <img class="menu__avatar" src="../img/menu/image13.png" alt="avatar">
+      <img class="menu__avatar" src="./img/menu/image13.png" alt="avatar">
     </div>
 
     <nav class="nav">
@@ -75,7 +75,7 @@
         </li>
         <li class="nav__item">
           <a class="nav__link" href="#">
-            <img class="nav__avatar" src="../img/menu/image13.png" alt="avatar">
+            <img class="nav__avatar" src="./img/menu/image13.png" alt="avatar">
             <span>Василиса Петрова</span>
           </a>
         </li>
@@ -144,6 +144,68 @@
                     <div class="available-courses__list">
                       <th:block th:each="course, st : ${project.courses}">
                         
+
+                        <a th:href="${course.idDeal} + '/'" class="available-course">
+                          <div class="available-course__wrapper "
+                               th:classappend="${course.theme}"
+                               th:style="'background-color:' + ${course.background} + ';'">
+                              <div class="available-course__main">
+                                  <div class="available-course__start -gap_4">
+                                      <div class="info-blocks">
+                                          <div class="info-blocks__wrapper">
+                                              <div class="info-block info-block_icon info-block_icon_play">
+                                                  <span class="info-block__text info-block__text_big" th:utext="${course.startDate}"></span>
+                                              </div>
+                                              <div class="info-block">
+                                                  <span class="info-block__text info-block__text_big" th:utext="${course.startTime}"></span>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="available-course__title -gap_2" th:utext="${course.name}"></div>
+                                  <div class="available-course__type -gap_3">
+                                      <div class="outline-text">
+                                          <div class="outline-text__content outline-text__content_dark">
+                                              <div class="outline-text__text" th:utext="${course.type}"></div>
+                                          </div>
+                                      </div>
+                                  </div>
+<!--                                                            <div class="available-course__desc">-->
+<!--                                                                Какой-то подзаголовок-->
+<!--                                                            </div>-->
+                                  <div class="available-course__progress -gap_4">
+                                      <div class="progress-bar">
+                                          <div class="progress-bar__wrapper">
+                                              <div class="progress-bar__progress"
+                                                   th:style="'width:' + ${course.completedModulesPercent} + '%;'" th:classappend="${course.completedModulesClass}"></div>
+                                              <span class="progress-bar__text" th:utext="${course.completedModulesPercent} + ' %'"></span>
+                                              <span class="progress-bar__text" th:utext="${course.completedModulesCount} + ' модуля пройдено'"></span>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="available-course__info">
+                                      <div class="info-blocks">
+                                          <div class="info-blocks__wrapper">
+                                              <div class="info-block info-block_icon info-block_icon_module">
+                                                  <span class="info-block__text" th:utext="${course.modulesCount} + ' модулей'"></span>
+                                              </div>
+                                              <div class="info-block info-block_icon info-block_icon_video">
+                                                  <span class="info-block__text" th:utext="${course.lessonsCount} + ' урок'"></span>
+                                              </div>
+                                              <div class="info-block info-block_icon info-block_icon_work">
+                                                  <span class="info-block__text" th:utext="${course.homeworkCount} + ' домашнее задание'"></span>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="available-course__side">
+                                  <div class="available-course__image">
+                                      <img src="/img/test-preview.png" alt="">
+                                  </div>
+                              </div>
+                          </div>
+                      </a>
                       </th:block>
                     </div>
                   </div>
@@ -159,10 +221,10 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<script src="../js/_tabby.js"></script>
-<script src="../js/tabs.js"></script>
-<script src="../js/progress-bar.js"></script>
-<script src="../js/app.js"></script>
+<script src="./js/_tabby.js"></script>
+<script src="./js/tabs.js"></script>
+<script src="./js/progress-bar.js"></script>
+<script src="./js/app.js"></script>
 <!-- <th:block th:insert="base :: jquery" />
 <script th:src="@{/js/_tabby.js}"></script>
 <script th:src="@{/js/tabs.js}"></script>
