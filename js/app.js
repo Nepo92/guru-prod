@@ -115,7 +115,7 @@ const getContainerTemplate = (data) => {
           </div>
         </div>
 
-        <img src="./img/available-course/SweetsAcademy.png" alt="academy">
+        <img src="../img/available-course/SweetsAcademy.png" alt="academy">
       </div>
 
       <div class="available-course__title -gap_2">${item.nameCourse}</div>
@@ -177,7 +177,7 @@ const getContainerTemplate = (data) => {
 
     <div class="available-course__side">
       <div class="available-course__image">
-        <img src="./img/available-course/bg.png" alt="bg">
+        <img src="../img/available-course/bg.png" alt="bg">
       </div>
     </div>
   </div>
