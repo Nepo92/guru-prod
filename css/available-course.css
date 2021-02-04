@@ -21,7 +21,7 @@
 }
 
 .available-course__wrapper.light {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .available-course__main {
@@ -88,12 +88,11 @@
   }
 }
 
-@media (max-width: 600px) {
-  .available-course__wrapper {
-    height: 500px;
-    display: block;
-  }
-  .available-course__title {
-    white-space: normal;
-  }
+.available-course__wrapper {
+  height: 500px;
+  display: block;
+}
+
+.available-course__title {
+  white-space: normal;
 }

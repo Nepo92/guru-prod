@@ -494,7 +494,7 @@ body {
 .fact-block_start {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 .fact-element {
@@ -2994,7 +2994,7 @@ body {
   justify-content: center;
   -webkit-box-align: start;
   -ms-flex-align: start;
-  align-items: start;
+  align-items: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
