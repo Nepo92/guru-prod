@@ -1038,7 +1038,7 @@
 }
 
 .send:hover .btn__title .btn_title-text {
-  color: #481E8C;
+  color: #481E8C !important;
 }
 
 .file__btns {
