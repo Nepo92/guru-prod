@@ -733,9 +733,9 @@
     transform: translate(2px, 1px);
   }
   .available-course__start .info-blocks__wrapper .info-block:nth-child(2) {
-    -webkit-transform: translate(12px, 0px);
-    -ms-transform: translate(12px, 0px);
-    transform: translate(12px, 0px);
+    -webkit-transform: translate(12px, 4px);
+    -ms-transform: translate(12px, 4px);
+    transform: translate(12px, 4px);
   }
   .available-course__start .info-blocks__wrapper .info-block:nth-child(3) {
     position: relative;
