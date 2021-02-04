@@ -1593,6 +1593,9 @@
     max-width: 490px;
     margin-left: 5px;
   }
+  .apprasial__inner .content-element__header-item:nth-child(2) .content-element__header-btn {
+    min-height: 60px;
+  }
   .apprasial__buttons {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1608,19 +1611,37 @@
   }
   .apprasial__buttons .content-element__header-btn {
     width: 240px;
+    min-height: 60px;
+  }
+  .apprasial__buttons .content-element__header-btn .like {
+    height: 60px;
+  }
+  .apprasial__buttons .content-element__header-btn .dislike {
+    height: 60px;
+    margin-top: 0;
+    -webkit-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    transform: translateY(10px);
   }
   /* Иконки лайк и дизлайк */
   .btn__icon_dislike::after {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    top: 0%;
+    position: relative;
+    top: -10%;
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
   }
   .btn__icon_like::after {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     top: 50%;
+    -webkit-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    transform: translateY(-20px);
   }
   /* Загрузить */
   .content-input__title {
@@ -1749,7 +1770,7 @@
   }
   .btn__icon_dislike::after {
     position: relative;
-    top: 0px;
+    top: -6px;
   }
   .upload-btn__wrapper {
     -webkit-transform: translateY(-13px);
