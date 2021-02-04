@@ -229,27 +229,7 @@ function validateCheckboxForm(form) {
   let menuFlag = false;
   const menuBtn = document.querySelector('.menu__control');
 
-  window.addEventListener('resize', () => {
-    if (innerWidth > 768) {
-      menuFlag = true;
-      menu.style.display = 'block';
-    } else {
-      menuFlag = false;
-      menu.style.display = 'none';
-    }
-  });
-
-  window.onload = () => {
-    if (innerWidth > 768) {
-      menuFlag = true;
-      menu.style.display = 'block';
-    } else {
-      menuFlag = false;
-      menu.style.display = 'none';
-    }
-  };
-
-  const menuToggle = () => {
+  const isOpen = () => {
     if (menuFlag) {
       menuFlag = false;
       menu.style.display = 'none';
@@ -259,5 +239,5 @@ function validateCheckboxForm(form) {
     }
   };
 
-  menuBtn.addEventListener('click', menuToggle);
+  menuBtn.addEventListener('click', isOpen);
 }());

@@ -492,6 +492,9 @@
 }
 
 @media (min-width: 768px) {
+  .open-mobile-menu {
+    display: block !important;
+  }
   /* Body */
   .body {
     -webkit-box-orient: horizontal;
