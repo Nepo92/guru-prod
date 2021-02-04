@@ -159,14 +159,6 @@
   content: "";
 }
 
-.main-nav__items-wrapper {
-  margin-top: 0;
-}
-
-.nav__item {
-  margin-top: 0;
-}
-
 .nav {
   position: relative;
   left: 0;
@@ -186,10 +178,8 @@
 }
 
 .nav__item {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  width: 100%;
+  display: inline-block;
+  width: auto;
   height: 80px;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -198,20 +188,29 @@
   padding: 0 20px;
 }
 
-.nav__item.active .nav__link {
+.nav__item .main-nav__item-wrapper {
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.nav__item .main-nav__item-wrapper:hover {
   color: #481E8C;
 }
 
-.nav__item.active .nav__link .nav__icon {
+.nav__item .main-nav__item-wrapper:hover .nav__text {
+  color: #481E8C;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.nav__item .main-nav__item-wrapper:hover .nav__icon {
+  position: absolute;
   fill: #481E8C;
-}
-
-.nav__item.active .nav__link .nav__text {
-  color: #481E8C;
-}
-
-.nav__item.active .nav__link .nav__text p {
-  color: rgba(72, 30, 140, 0.5);
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 .nav__list {
@@ -266,8 +265,6 @@
   position: absolute;
   margin-left: 22px;
   margin-right: 15px;
-  background-image: url(./../../img//menu/courses.svg);
-  fill: #BFC0C4 !important;
 }
 
 .nav__list .nav__item:first-child .nav__text {
@@ -286,7 +283,9 @@
   position: absolute;
   margin-left: 22px;
   margin-right: 15px;
-  background-image: url(./../../img/menu/cart.svg);
+  -webkit-transform: translateX(-11px);
+  -ms-transform: translateX(-11px);
+  transform: translateX(-11px);
 }
 
 .nav__list .nav__item:nth-child(2) .nav__text {
@@ -305,7 +304,9 @@
   position: absolute;
   margin-left: 22px;
   margin-right: 15px;
-  background-image: url(./../../img/menu/logout.svg);
+  -webkit-transform: translateX(-11px);
+  -ms-transform: translateX(-11px);
+  transform: translateX(-11px);
 }
 
 .nav__list .nav__item:nth-child(3) .nav__text {
@@ -363,6 +364,9 @@
 
 .nav__icon {
   fill: #BFC0C4;
+  -webkit-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  transform: translateX(0px);
 }
 
 .nav__text {
