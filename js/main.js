@@ -239,6 +239,16 @@ function validateCheckboxForm(form) {
     }
   });
 
+  window.onload = () => {
+    if (innerWidth > 768) {
+      menuFlag = true;
+      menu.style.display = 'block';
+    } else {
+      menuFlag = false;
+      menu.style.display = 'none';
+    }
+  };
+
   const menuToggle = () => {
     if (menuFlag) {
       menuFlag = false;
