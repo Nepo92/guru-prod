@@ -78,16 +78,6 @@
   max-width: 100%;
 }
 
-@media (max-width: 850px) {
-  .available-course__main {
-    max-width: unset;
-  }
-  .available-course__wrapper {
-    height: 400px;
-    display: block;
-  }
-}
-
 .available-course__wrapper {
   height: 500px;
   display: block;

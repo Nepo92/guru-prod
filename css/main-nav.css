@@ -682,15 +682,6 @@
   max-width: 100%;
 }
 
-@media (max-width: 1000px) {
-  .mobile-nav {
-    display: block;
-  }
-  .main-nav_none {
-    display: none;
-  }
-}
-
 .open-mobile-menu {
   height: 100vh;
   width: 100vw;

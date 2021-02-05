@@ -16,19 +16,19 @@
     <link th:href="@{/css/btn.css}" rel="stylesheet">
     <link th:href="@{/css/main-nav.css}" rel="stylesheet"> -->
 
-	<link rel="stylesheet" href="../css/u_main.css">
-	<link rel="stylesheet" href="../css/gap.css">
-	<link rel="stylesheet" href="../css/custom-tabs.css">
-	<link rel="stylesheet" href="../css/available-course.css">
-	<link rel="stylesheet" href="../css/info-blocks.css">
-	<link rel="stylesheet" href="../css/progress-bar.css">
-	<link rel="stylesheet" href="../css/btn.css">
-	<link rel="stylesheet" href="../css/main-nav.css">
+	<link rel="stylesheet" href="./css/u_main.css">
+	<link rel="stylesheet" href="./css/gap.css">
+	<link rel="stylesheet" href="./css/custom-tabs.css">
+	<link rel="stylesheet" href="./css/available-course.css">
+	<link rel="stylesheet" href="./css/info-blocks.css">
+	<link rel="stylesheet" href="./css/progress-bar.css">
+  <link rel="stylesheet" href="./css/btn.css">
+	<link rel="stylesheet" href="./css/main-nav.css">
 
 	<!-- Мои CSS -->
 
-	<link rel="stylesheet" href="../css/blocks/menu.css">
-	<link rel="stylesheet" href="../css/blocks/u_module.css">
+	<link rel="stylesheet" href="./css/blocks/menu.css">
+	<link rel="stylesheet" href="./css/blocks/u_module.css">
 
 </head>
 
@@ -89,9 +89,9 @@
                   <div class="mobile-menu__item mobile-menu__item_close burger">
                     <div class="mobile-menu__icon mobile-menu__icon_close burger__row"></div>
                   </div>
-                  <div class="mobile-menu__item mobile-menu__item_open burger">
-                    <div class="mobile-menu__icon mobile-menu__icon_open burge.r__row"></div>
-                  </div>
+                  <!-- <div class="mobile-menu__item mobile-menu__item_open burger">
+                    <div class="mobile-menu__icon mobile-menu__icon_open burger__row"></div>
+                  </div> -->
                   <div class="mobile-menu__item">
                     Меню
                   </div>
@@ -186,84 +186,102 @@
 				<div class="header__box block">
 					<div class="header__wrapper block-wrapper">
 						<div class="header__main">
-							<div class="header__items">
+
+              <div class="header__item header__item_btn header__back back">
+                <a th:href="'/user/courses/' + ${idDeal} + '/'" class="btn btn_outline ">
+                  <div class="btn__content btn__content_large">
+                    <span class="btn__title btn__title_small btn__icon btn__icon_arrow-left back__arrow">
+                      <span class="btn_title-text btn_title-text_small back__title">К списку модулей</span>
+                    </span>
+                  </div>
+                </a>
+              </div>
+
+
+							<!-- <div class="header__items header__title">
 								<div class="header__items-wrapper">
 									<div class="header__item header__item_title">
-										<h3>Модули курса</h3>
-									</div>
-									<div class="header__item header__item_btn">
-										<a th:href="'/user/courses/' + ${idDeal} + '/'" class="btn btn_outline">
-											<div class="btn__content btn__content_large">
-												<span class="btn__title btn__title_small btn__icon btn__icon_arrow-left">
-													<span class="btn_title-text btn_title-text_small">К списку модулей</span>
-												</span>
-											</div>
-										</a>
+										<h3> </h3>
 									</div>
 								</div>
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</div>
 			</header>
-		</div>
+    </div>
+    
+
 		<div class="body__content">
-			<div class="lessons block -gap-inner-bottom_5 -gap-inner-top_5">
+
+			<div class="lessons block -gap-inner-bottom_5 -gap-inner-top_5 ">
 				<div class="lessons__wrapper block-wrapper">
-					<div class="lessons__main">
+          
+          <div class="lessons__main">
 						<div class="block-header -gap_5">
-							<div class="title title-h2 -gap_0" th:utext="${module.name}"></div>
-							<div class="subtitle subtitle-h5" th:utext="'Модуль ' + ${module.index}"></div>
+							<div class="title title-h2 -gap_0 lessons__title" th:utext="${module.name}"> Ягодные маффины
+                и восточные сладости</div>
+							<div class="subtitle subtitle-h5 lessons__subtitle" th:utext="'Модуль ' + ${module.index}">модуль 1</div>
 						</div>
 
 						<th:block th:each="lesson, stat : ${lessons}">
 							<div class="content-element">
-								<div class="content-element__wrapper">
+								<div class="content-element__wrapper lesson">
 									<div class="content-element__side">
-										<div class="content-element__header">
+										<div class="content-element__header lesson__header">
 											<div class="content-element__header-wrapper">
-												<div class="content-element__header-item">
+												<div class="content-element__header-item lesson__part">
 													<div class="content-element__header-main">
-														<div class="content-element__header-element">
+														<div class="content-element__header-element lesson__id">
 															<span class="content-element__title content-element__title_blue title title-h4"
-																th:utext="${stat.count}"></span>
+																th:utext="${stat.count}">1</span>
 														</div>
 													</div>
 												</div>
-												<div class="content-element__header-item">
+												<div class="content-element__header-item lesson__part">
 													<div class="content-element__header-main -gap_2">
-														<div class="content-element__header-element">
-															<span class="content-element__title title title-h5" th:utext="${lesson.title}"></span>
+														<div class="content-element__header-element lesson__title">
+															<span class="content-element__title title title-h5" th:utext="${lesson.title}">Выпекаем коржи</span>
 														</div>
 													</div>
 													<div class="content-element__header-side">
-														<div class="info-blocks">
+														<div class="info-blocks lesson__info info">
 															<div class="info-blocks__wrapper">
-																<div class="info-block info-block_icon info-block_icon_clock">
-																	<span class="info-block__text"
-																		th:utext="${lesson.duration / 60 } + ' ч ' + ${lesson.duration % 60 } + ' мин'"></span>
+																<div class="info-block info-block_icon info-block_icon_clock info__item">
+																	<span class="info-block__text info__text"
+																		th:utext="${lesson.duration / 60 } + ' ч ' + ${lesson.duration % 60 } + ' мин'"> 1 ч 30 мин</span>
 																</div>
-																<div class="info-block info-block_icon info-block_icon_doc">
-																	<span class="info-block__text"
-																		th:utext="${lesson.documentsCounter} + ' документов'"></span>
+																<div class="info-block info-block_icon info-block_icon_doc info__item">
+																	<span class="info-block__text info__text"
+																		th:utext="${lesson.documentsCounter} + ' документов'">3 файла</span>
 																</div>
 															</div>
 														</div>
 													</div>
 												</div>
-												<div class="content-element__header-item">
+												<div class="content-element__header-item lesson__part">
 													<div class="content-element__header-main">
-														<div class="content-element__header-btn">
+														<div class="content-element__header-btn lesson__btn">
 															<th:block th:if="${allowHomeworkStart or lesson.type != 'homework'}">
 																<a th:href="'/user/courses/' + ${idDeal} + '/' + ${lesson.idModule} + '/' + ${lesson.id} + '/'"
 																	class="btn btn_outline">
 																	<div class="btn__content btn__content_large">
 																		<span class="btn__title btn__title_small">
 																			<th:block th:if="${lesson.type} == 'homework'">
-																				<span class="btn_title-text btn_title-text_small">Перейти к ДЗ</span>
+                                        <span class="btn_title-text btn_title-text_small lesson__text">Перейти к ДЗ</span>
+                                        
+                                        <svg class="lesson__icon">
+                                          <use xlink:href="sprite.svg#next-arrow"></use>
+                                        </svg>
+
 																			</th:block>
 																			<th:block th:unless="${lesson.type} == 'homework'">
-																				<span class="btn_title-text btn_title-text_small">Перейти к уроку</span>
+
+                                        <svg class="lesson__icon">
+                                          <use xlink:href="sprite.svg#next-arrow"></use>
+                                        </svg>
+
+																				<span class="btn_title-text btn_title-text_small lesson__text">Перейти к уроку</span>
 																			</th:block>
 																		</span>
 																	</div>
@@ -277,12 +295,58 @@
 									</div>
 								</div>
 							</div>
-						</th:block>
+            </th:block>
+
+            <!-- <div class="content-element">
+              <div class="content-element__wrapper">
+                <div class="content-element__side documents content-element__side_small ">
+                  <div class="content-element__header">
+                    <div vote-block-wrapper class="content-element__header-wrapper apprasial__inner">
+                      <div class="content-element__header-item">
+                        <div class="content-element__header-main">
+                          <div class="content-element__header-element">
+                            <span class="content-element__title title title-h6 appraisal__title">Пожалуйста, оцените
+                              урок</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="content-element__header-item">
+                        <div class="content-element__header-main apprasial__buttons">
+                          <div vote data-rate="1" class="content-element__header-btn">
+                            <div class="btn btn_outline-gray like">
+                              <div class="btn__content btn__content_xlarge">
+                                <span class="btn__title btn__icon btn__icon_like btn__title_medium">
+                                  <span class="btn_title-text btn_title-text_small llike__icin">
+                                  </span>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div vote data-rate="0" class="content-element__header-btn">
+                            <div class="btn btn_outline-gray">
+                              <div class="btn__content btn__content_xlarge dislike">
+                                <span class="btn__title btn__icon btn__icon_dislike btn__title_medium">
+                                  <span class="btn_title-text btn_title-text_small">
+                                  </span>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
 					</div>
 				</div>
-			</div>
-		</div>
-	</div>
+      </div>
+    </div>
+  </div>
+  
+
 
 
 </body>
