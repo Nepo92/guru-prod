@@ -570,6 +570,15 @@
   font-size: 32px;
 }
 
+.dislike__icon {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 0%;
+  margin-top: -22px;
+  fill: #ff284f;
+}
+
 .like {
   position: relative;
   min-width: auto;
@@ -599,20 +608,11 @@
   font-size: 16px;
 }
 
-.btn__icon_like::after {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-140%);
-  -ms-transform: translateY(-140%);
-  transform: translateY(-140%);
-}
-
-.btn__icon_dislike::after {
-  position: relative;
-  top: 0%;
-  -webkit-transform: translateY(-80%);
-  -ms-transform: translateY(-80%);
-  transform: translateY(-80%);
+.like__icon {
+  width: 20px;
+  height: 20px;
+  fill: #27ae60;
+  margin-top: 5px;
 }
 
 /* Загрузить */
@@ -1419,11 +1419,6 @@
     -ms-flex-direction: row;
     flex-direction: row;
   }
-  .content-element:nth-child(2) .content-element__header-main {
-    -webkit-transform: translateX(8px);
-    -ms-transform: translateX(8px);
-    transform: translateX(8px);
-  }
   .content-element:nth-child(2) .content-element__title {
     position: relative;
     top: -8px;
@@ -1647,13 +1642,27 @@
     transform: translateX(0px);
     position: relative;
     left: -7px;
+    margin-right: 15px;
   }
   .apprasial__buttons .content-element__header-btn {
     width: 240px;
     min-height: 60px;
   }
   .apprasial__buttons .content-element__header-btn .like {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     height: 60px;
+  }
+  .apprasial__buttons .content-element__header-btn .like__icon {
+    position: relative;
+    top: 10px;
   }
   .apprasial__buttons .content-element__header-btn .dislike {
     height: 60px;
@@ -1661,26 +1670,19 @@
     -webkit-transform: translateY(10px);
     -ms-transform: translateY(10px);
     transform: translateY(10px);
-  }
-  /* Иконки лайк и дизлайк */
-  .btn__icon_dislike::after {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .apprasial__buttons .content-element__header-btn .dislike__icon {
     position: relative;
-    top: -10%;
-    -webkit-transform: translateY(0px);
-    -ms-transform: translateY(0px);
-    transform: translateY(0px);
-  }
-  .btn__icon_like::after {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    top: 50%;
-    -webkit-transform: translateY(-20px);
-    -ms-transform: translateY(-20px);
-    transform: translateY(-20px);
+    top: 10px;
   }
   /* Загрузить */
   .content-input__title {
