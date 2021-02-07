@@ -29,13 +29,11 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  cursor: default;
 }
 
 a {
   text-decoration: none;
   background-color: transparent;
-  color: inherit;
 }
 
 .title-h2,

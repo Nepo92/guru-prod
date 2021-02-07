@@ -1,0 +1,410 @@
+<html lang="ru" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Мои курсы">
+
+  <title>Мои курсы</title>
+
+  <!-- <link th:href="@{/css/u_main.css}" rel="stylesheet">
+  <link th:href="@{/css/gap.css}" rel="stylesheet">
+  <link th:href="@{/css/custom-tabs.css}" rel="stylesheet">
+  <link th:href="@{/css/available-course.css}" rel="stylesheet">
+  <link th:href="@{/css/info-blocks.css}" rel="stylesheet">
+  <link th:href="@{/css/progress-bar.css}" rel="stylesheet">
+  <link th:href="@{/css/btn.css}" rel="stylesheet">
+  <link th:href="@{/css/main-nav.css}" rel="stylesheet"> -->
+
+  <link href="../css/u_main.css" rel="stylesheet">
+  <link href="../css/gap.css" rel="stylesheet">
+  <link href="../css/custom-tabs.css" rel="stylesheet">
+  <link href="../css/available-course.css" rel="stylesheet">
+  <link href="../css/info-blocks.css" rel="stylesheet">
+  <link href="../css/progress-bar.css" rel="stylesheet">
+  <link href="../css/btn.css" rel="stylesheet">
+  <link href="../css/main-nav.css" rel="stylesheet">
+
+  <link href="../css/blocks/u_courses.css" rel="stylesheet">
+  <link href="../css/blocks/menu.css" rel="stylesheet">
+  <link href="../css/blocks/tabs.css" rel="stylesheet">
+
+</head>
+<!--Аттрибут тега body-->
+<!-- onload="getCountdownOnUserCoursesPage() -->
+
+<body class="body">
+  <div th:replace="base :: user-nav"></div>
+  <div th:replace="base :: user-mobile-nav"></div>
+
+  <!-- Мобильное меню -->
+
+  <div class="mobile-nav">
+    <div class="mobile-nav__box block menu__inner mobile-menu">
+
+      <div class="mobile-nav__wrapper block-wrapper mobile-menu__inner">
+
+        <div class="mobile-nav__main">
+
+          <div class="mobile-nav__items">
+
+            <div class="mobile-nav__items-wrapper mobile-menu__wrapper">
+
+              <div class="mobile-nav__item mobile-nav__item_menu mobile-menu__left">
+
+                <div js-open-mobile-menu class="mobile-menu mobile-menu__control">
+                  <div class="mobile-menu__item mobile-menu__item_close">
+                    <div class="mobile-menu__icon mobile-menu__icon_close"></div>
+                  </div>
+                  <div class="mobile-menu__item mobile-menu__item_open">
+                    <div class="mobile-menu__icon mobile-menu__icon_open"></div>
+                  </div>
+
+                  <div class="mobile-menu__item mobile-menu__item">
+                    Меню
+                  </div>
+                </div>
+              </div>
+
+              <div class="mobile-nav__item mobile-nav__item_avatar mobile-menu__right">
+                <div class="avatar">
+                  <div class="avatar__wrapper avatar__wrapper_xsmall">
+                    <span class="avatar-image avatar-image_default mobile-menu__avatar">
+                      <img src="../img/menu/image13.png" alt="avatar">
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="open-mobile-menu nav__wrapper nav" js-mobile-menu style="display: none">
+      <div class="open-mobile-menu__container">
+
+        <div class="main-nav__logo open-mobile-menu__logo menu__avatar nav__info">
+          <div class="main-nav__item-wrapper open-mobile-menu__item-wrapper">
+            <div class="main-nav__item-wrapper nav__item active nav__item-name">
+              <div class="main-nav__avatar menu__avatar">
+                <div class="avatar">
+                  <div class="avatar__wrapper avatar__wrapper_large">
+                    <span class="avatar-image avatar-image_large avatar-image_default">
+                      <img src="../img/menu/image13.png" alt="avatar">
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="main-nav__avatar-desc">
+                <div class="main-nav__avatar-name nav__name">Агнаева Екатерина Викторовна</div>
+              </div>
+            </div>
+            <div class="open-mobile-menu__close menu__close" js-close-mobile-menu>
+              <svg width="20" height="20" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.25352 6.50015L12.6369 10.8835C13.1211 11.3677 13.1211 12.1527 12.6369 12.6369C12.1527 13.121 11.3677 13.121 10.8835 12.6369L6.50017 8.25352L2.11681 12.6369C1.63262 13.121 0.847605 13.121 0.363427 12.6369C-0.120745 12.1527 -0.120739 11.3677 0.36344 10.8835L4.74682 6.50015L0.363138 2.11651C-0.121041 1.63233 -0.121047 0.847327 0.363125 0.363144C0.847302 -0.121044 1.63232 -0.121049 2.1165 0.363133L6.50017 4.74678L10.8838 0.363133C11.368 -0.121049 12.153 -0.121044 12.6372 0.363144C13.1214 0.847327 13.1214 1.63233 12.6372 2.11651L8.25352 6.50015Z"
+                  fill="black" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="main-nav__list-items open-mobile-menu__list-items nav__list">
+
+          <div class="main-nav__items-wrapper nav__item">
+            <a href="/user/courses/" class="main-nav__item-wrapper">
+              <div class="main-nav__item main-nav__item_dashboard  main-nav__item_active">
+              </div>
+              <div class="main-nav__item-title">Мои курсы</div>
+            </a>
+          </div>
+
+          <div class="main-nav__items-wrapper nav__item">
+            <a href="/user/courses/" class="main-nav__item-wrapper">
+              <div class="main-nav__item main-nav__item_dashboard  main-nav__item_active">
+              </div>
+              <div class="main-nav__item-title">Мои курсы</div>
+            </a>
+          </div>
+
+          <div class=" open-mobile-menu__exit nav__item">
+            <a href="/logout" class="main-nav__item-wrapper">
+              <div class="main-nav__item main-nav__item_exit nav__icon"">
+              </div>
+              <div class=" main-nav__item-title">Выйти из аккаунта</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/main.js"></script>
+  </div>
+
+  <!-- Меню -->
+
+  <div class="main-nav main-nav_none menu">
+    <div class="main-nav__wrapper menu">
+
+      <div class="main-nav__logo">
+        <div class="main-nav__item-wrapper">
+          <div class="main-nav__item-wrapper">
+            <div class="main-nav__avatar">
+              <div class="avatar">
+                <div class="avatar__wrapper avatar__wrapper_large">
+                  <span class="avatar-image avatar-image_large avatar-image_default menu__avatar">
+                    <img src="../img/menu/image13.png" alt="avatar">
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="main-nav__avatar-desc">
+              <div class="main-nav__avatar-name nav__name">Агнаева Екатерина Викторовна</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-nav__list-items">
+        <div class="main-nav__items-wrapper">
+          <div class="main-nav__items-wrapper">
+            <a href="/user/courses/" class="main-nav__item-wrapper">
+              <div class="main-nav__item main-nav__item_dashboard  main-nav__item_active"></div>
+              <div class="main-nav__item-title">Мои курсы</div>
+            </a>
+          </div>
+        </div>
+
+        <div class="main-nav__items-wrapper">
+          <a href="/logout" class="main-nav__item-wrapper">
+            <div class="main-nav__item main-nav__item_exit"></div>
+            <div class="main-nav__item-title">Выход</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Container -->
+
+  <div class="body__wrapper">
+    <div class="body__header">
+
+      <!-- Header -->
+
+      <header class="header">
+        <div class="header__box block">
+
+          <div class="header__wrapper block-wrapper">
+
+            <div class="header__main">
+              <div class="header__items">
+
+                <div class="header__items-wrapper">
+
+                  <div class="header__item header__item_title">
+                    <h3>Мои курсы</h3>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <div class="body__content">
+      <div class="available-courses block -gap-inner-bottom_5 -gap-inner-top_5">
+
+        <div class="available-courses__wrapper block-wrapper">
+
+
+          <div class="available-courses__main">
+            <div class="-gap_3">
+              <div class="tabs tabs_underline">
+                <div class="tabs__wrapper">
+                  <div class="tabs__list">
+                    <th:block th:each="project, stat : ${projectCourses}">
+                      <div class="tabs__item">
+                        <a js-tabby-tab href="#" class="tabs-item" th:attr="data-tabby='c:' + ${stat.index}"
+                          th:classappend="${stat.index == 0 ? 'is-open' : ''}">
+                          <div class="tabs-item__title" th:utext="${project.name}"></div>
+                        </a>
+                      </div>
+                    </th:block>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tabs-animated">
+
+              <div js-tabby-panel class="tabs-panel  is-open" data-tabby="c:0">
+                <div class="tabs-panel-transform">
+                  <div class="available-courses__list">
+
+                  <a href="156388/" class="course__item">
+
+                    <div class="available-course__wrapper courses" style="background-color:#ff7d52;">
+                      <div class="available-course__main course__about">
+                        <div class="available-course__start -gap_4 courses__date">
+                          <div class="info-blocks">
+
+                            <div class="info-blocks__wrapper date">
+                              <div class="info-block info-block_icon info-block_icon_play date__item">
+                                <span class="info-block__text info-block__text_big">25.11.20</span>
+                              </div>
+
+                              <div class="info-block date__item">
+                                <span class="info-block__text info-block__text_big">19:00</span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <img src="../img/SweetsAcademy.svg" alt="sweetsAcademy">
+                        </div>
+
+                        <div class="available-course__title -gap_2 courses__title">Пряники Домашние</div>
+                        <div class="available-course__type -gap_3 courses__type type">
+                          <div class="outline-text">
+                            <div class="outline-text__content outline-text__content_dark">
+
+                              <div class="outline-text__text type__text">Онлайн-курс</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="available-course__desc courses__desc">
+                          Какой-то подзаголовок
+                        </div>
+
+                        <div class="available-course__progress -gap_4 courses__progress">
+                          <div class="progress-bar">
+                            <div class="progress-bar__wrapper">
+                              <div class="progress-bar__progress progress_red" style="width:0%;"></div>
+                              <span class="progress-bar__text">0 %</span>
+                              <span class="progress-bar__text">0 модуля пройдено</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="available-course__info">
+                          <div class="info-blocks">
+                            <div class="info-blocks__wrapper courses__content info">
+                              <div class="info-block info-block_icon info-block_icon_module info__item">
+                                <span class="info-block__text">2 модулей</span>
+                              </div>
+                              <div class="info-block info-block_icon info-block_icon_video info__item">
+                                <span class="info-block__text">2 урок</span>
+                              </div>
+                              <div class="info-block info-block_icon info-block_icon_work info__item">
+                                <span class="info-block__text">2 заданий</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="available-course__side">
+                        <div class="available-course__image courses__image">
+                          <img src="../img/bg.png" alt="bg">
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+
+                  <a href="156388/" class="course__item">
+
+                    <div class="available-course__wrapper courses" style="background-color:#ff7d52;">
+                      <div class="available-course__main course__about">
+                        <div class="available-course__start -gap_4 courses__date">
+                          <div class="info-blocks">
+
+                            <div class="info-blocks__wrapper date">
+                              <div class="info-block info-block_icon info-block_icon_play date__item">
+                                <span class="info-block__text info-block__text_big">25.11.20</span>
+                              </div>
+
+                              <div class="info-block date__item">
+                                <span class="info-block__text info-block__text_big">19:00</span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <img src="../img/SweetsAcademy.svg" alt="sweetsAcademy">
+                        </div>
+
+                        <div class="available-course__title -gap_2 courses__title">Пряники Домашние</div>
+                        <div class="available-course__type -gap_3 courses__type type">
+                          <div class="outline-text">
+                            <div class="outline-text__content outline-text__content_dark">
+
+                              <div class="outline-text__text type__text">Онлайн-курс</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="available-course__desc courses__desc">
+                          Какой-то подзаголовок
+                        </div>
+
+                        <div class="available-course__progress -gap_4 courses__progress">
+                          <div class="progress-bar">
+                            <div class="progress-bar__wrapper">
+                              <div class="progress-bar__progress progress_red" style="width:0%;"></div>
+                              <span class="progress-bar__text">0 %</span>
+                              <span class="progress-bar__text">0 модуля пройдено</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="available-course__info">
+                          <div class="info-blocks">
+                            <div class="info-blocks__wrapper courses__content info">
+                              <div class="info-block info-block_icon info-block_icon_module info__item">
+                                <span class="info-block__text">2 модулей</span>
+                              </div>
+                              <div class="info-block info-block_icon info-block_icon_video info__item">
+                                <span class="info-block__text">2 урок</span>
+                              </div>
+                              <div class="info-block info-block_icon info-block_icon_work info__item">
+                                <span class="info-block__text">2 заданий</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="available-course__side">
+                        <div class="available-course__image courses__image">
+                          <img src="../img/bg.png" alt="bg">
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../js/_tabby.js"></script>
+<script src="../js/tabs.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/progress-bar.js"></script>
+<script src="../js/countdown.js"></script>
+
+<!-- <th:block th:insert="base :: jquery" />
+<script th:src="@{/js/_tabby.js}"></script>
+<script th:src="@{/js/tabs.js}"></script>
+<script th:src="@{/js/progress-bar.js}"></script>
+<script th:src="@{/js/countdown.js}"></script> -->
+
+</html>

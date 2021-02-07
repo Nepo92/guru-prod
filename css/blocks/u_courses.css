@@ -1,801 +1,361 @@
-@charset "UTF-8";
-/* Body */
-.body {
-  position: relative;
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: TTCommons;
+  background-color: #f4f4f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  cursor: default;
+}
+
+a {
+  text-decoration: none;
+  background-color: transparent;
+  color: inherit;
 }
 
 .body__wrapper {
-  padding: 20px 20px 70px 20px;
-  margin: 0;
-  overflow: visible;
   width: 100%;
-}
-
-.body__content .-gap-inner-bottom_5 {
-  padding: 0;
-}
-
-/* Header */
-.header__item {
-  padding: 0;
-}
-
-.header__item_title {
-  padding: 0;
-  font-weight: 600;
-  font-size: 30px;
-  line-height: 34px;
 }
 
 .header__box {
-  padding: 0;
+  padding-bottom: 0;
+  padding-left: 20px;
 }
 
-/* Course Column */
-.available-course {
-  border-radius: 10px;
+.available-courses {
+  height: auto !important;
+}
+
+.available-courses.block {
+  padding: 0 20px;
+}
+
+.available-courses__list {
   margin-top: 20px;
-  margin-bottom: 0;
-  /* Верхний блок с датой начала */
-  /* Название */
-  /* Тип */
-  /* Описание */
-  /* Прогресс бар */
-  /* Об курсе */
-  /* Фоновая картинка */
+  margin-bottom: 40px;
 }
 
-.available-course__wrapper {
-  position: relative;
-  top: 0;
-  left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 100%;
-  padding: 16px 20px 0 19px;
-  border-radius: 10px;
-  overflow: hidden;
-  /* dark background */
-}
-
-.available-course__wrapper.dark .available-course {
-  /* Колонка с датой */
-  /* Название курса */
-  /* Тип курса */
-  /* Описание курса */
-  /* О курсе */
-}
-
-.available-course__wrapper.dark .available-course__start .info-blocks__wrapper .info-block__icon {
-  fill: rgba(255, 255, 255, 0.6);
-}
-
-.available-course__wrapper.dark .available-course__start .info-blocks__wrapper .info-block__text {
-  color: white;
-}
-
-.available-course__wrapper.dark .available-course__start .info-blocks__wrapper .info-block:first-child::after {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-.available-course__wrapper.dark .available-course__title {
-  color: white;
-}
-
-.available-course__wrapper.dark .available-course__type .outline-text__content .outline-text__text {
-  color: white;
-  border: 1px solid white;
-}
-
-.available-course__wrapper.dark .available-course__desc {
-  color: white;
-}
-
-.available-course__wrapper.dark .available-course__info .info-blocks__wrapper .info-block {
-  /* 1 колонка */
-}
-
-.available-course__wrapper.dark .available-course__info .info-blocks__wrapper .info-block__text {
-  color: white;
-}
-
-.available-course__wrapper.dark .available-course__info .info-blocks__wrapper .info-block__icon {
-  fill: white;
-  width: 20px;
-  height: 20px;
-}
-
-.available-course__wrapper.dark .available-course__info .info-blocks__wrapper .info-block:first-child .info-block__icon {
-  border: 2px solid white !important;
-  border-radius: 5px;
-}
-
-.available-course__main {
+.courses {
   padding: 0;
+  height: auto;
+  margin-top: 20px;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.courses:hover {
+  -webkit-box-shadow: 0px 10px 20px rgba(8, 15, 32, 0.3);
+  box-shadow: 0px 10px 20px rgba(8, 15, 32, 0.3);
+}
+
+.courses__main {
+  padding: 20px 20px 0 20px;
   width: 100%;
 }
 
-.available-course__start {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  margin-bottom: 0;
+.courses__about {
+  padding: 20px 20px 0 20px;
 }
 
-.available-course__start .info-blocks .info-blocks__wrapper .info-block::after {
-  width: 2px;
-  height: 10px;
-  content: "";
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 3px auto 0;
-  right: 2px;
-  background-color: rgba(128, 128, 128, 0.5);
+.courses__item {
+  padding: 0;
 }
 
-.available-course__start .info-blocks .info-blocks__wrapper .info-block:first-child {
-  position: relative;
-}
-
-.available-course__start .info-blocks .info-blocks__wrapper .info-block:first-child .info-block__text span {
-  margin-left: 7px;
-  font-weight: 500;
-  color: rgba(128, 128, 128, 0.8);
-}
-
-.available-course__start .info-blocks .info-blocks__wrapper .info-block:nth-child(2)::after {
-  display: none;
-}
-
-.available-course__start .info-blocks .info-blocks__wrapper .info-block:last-child {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.available-course__start img {
-  display: none;
-  width: 35px;
-  height: 24px;
-}
-
-.available-course__title {
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 28px;
-  margin-top: 10px;
-  margin-bottom: 0;
-  color: black;
-}
-
-.available-course__type {
-  margin-bottom: 0;
-}
-
-.available-course__type .outline-text__content .outline-text__text {
-  display: inline-block;
-  color: #481e8c;
-  border: 1px solid #481e8c;
-  padding: 1px 10px;
-  border-radius: 5px;
-}
-
-.available-course__desc {
-  margin-top: 42px;
-  font-weight: 500;
-  font-size: 14px;
-  color: rgba(22, 23, 24, 0.6);
-  line-height: 16px;
-}
-
-.available-course__progress {
-  margin-top: 22px;
-  width: 100%;
-  height: 40px;
-}
-
-.available-course__info .info-blocks__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.available-course__info .info-blocks__wrapper .info-block {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-top: 10px;
-}
-
-.available-course__info .info-blocks__wrapper .info-block:first-child {
+.courses__item:first-child {
   margin-top: 0;
 }
 
-.available-course__info .info-blocks__wrapper .info-block:first-child .info-block__icon {
-  border: 2px solid #481e8c;
+.courses__date img {
+  display: none;
+}
+
+.courses__title {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 24px;
+}
+
+.courses__type {
+  margin-top: 8px;
+  margin-bottom: 0;
+  display: inline-block;
+}
+
+.courses__desc {
+  margin-top: 42px;
+}
+
+.courses__progress {
+  margin-top: 20px;
+}
+
+.courses__content {
+  margin-top: 20px;
+}
+
+.courses__image {
+  margin-top: 5px;
+}
+
+.type__text {
+  padding: 5px 10px;
+  border: 1px solid;
   border-radius: 5px;
 }
 
-.available-course__side {
-  padding: 0;
-  pointer-events: none;
-  bottom: 0;
-}
-
-.available-course__side .available-course__image {
-  bottom: 0;
-  text-align: center;
-  margin: 0;
-  width: auto;
-}
-
-.available-course__side .available-course__image img {
-  width: 100%;
-  margin: 0 auto;
-  pointer-events: none;
-}
-
-/* Об курсе */
-.info-blocks__wrapper {
+.info {
+  margin-bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
-.info-blocks__wrapper .info-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.info__item {
+  min-width: auto;
 }
 
-.info-blocks__wrapper .info-block__icon {
-  width: 20px;
-  height: 20px;
-  fill: #481e8c;
-  margin-right: 5px;
+.info__item:first-child {
+  margin-top: 0;
 }
 
-.info-blocks__wrapper .info-block__text {
+.info__item::after {
+  display: none;
+}
+
+.date__item {
+  font-size: 14px;
+  font-style: normal;
   font-weight: 500;
-  font-size: 12px;
   line-height: 16px;
-  color: #161718;
-  margin-right: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.info-blocks__wrapper .info-block:last-child {
-  font-size: 12px;
-}
-
-.info-blocks__wrapper .info-block:last-child .info-block__text {
-  margin-right: 0px;
-}
-
-/* Прогресс бар */
-.progress-bar__wrapper {
-  width: 100%;
-  height: 100%;
-}
-
-.progress-bar__progress {
-  width: 75%;
-  height: 100%;
-  background-color: #ffa515;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
 .progress-bar__text {
-  font-size: 12px;
-  z-index: 0;
-}
-
-@media (min-width: 280px) {
-  /* Колонка курса */
-  .available-course {
-    /* Колонка с датой начала */
-    /* Фоновая картинка */
-    /* Прогресс */
-  }
-  .available-course__start img {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .available-course__image img {
-    width: 201px;
-  }
-  .available-course__progress .progress-bar__text {
-    font-size: 16px;
-  }
-}
-
-@media (min-width: 320px) {
-  /* Колонка курса */
-  .available-course {
-    /* Прогресс бар */
-  }
-  .available-course__start img {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .available-course__progress .progress-bar__wrapper {
-    position: relative;
-  }
-  .available-course__progress .progress-bar__progress {
-    width: calc(100% - 50px);
-  }
+  font-size: 14px;
 }
 
 @media (min-width: 375px) {
-  /* Название блока */
-  .header {
-    /* Обертка для названия */
+  .courses__date {
+    margin-bottom: 0;
   }
-  .header__item {
-    font-size: 26px;
-    letter-spacing: 0.5px;
-    -webkit-transform: translate(0px, -2px);
-    -ms-transform: translate(0px, -2px);
-    transform: translate(0px, -2px);
-    padding-bottom: 0;
-  }
-  .header__box {
-    padding: 0;
-  }
-  /* Колонка курса */
-  .available-course {
-    -webkit-box-shadow: 0px 10px 20px rgba(8, 15, 32, 0.08);
-    box-shadow: 0px 10px 20px rgba(8, 15, 32, 0.08);
-    /* Колонка с датой начала */
-    /* Название курса */
-    /* Тип курса */
-    /* Подзаголовок */
-    /* О курсе */
-    /* Фоновая картинка */
-  }
-  .available-course__wrapper {
-    padding: 18px 20px 0px 20px;
-  }
-  .available-course__start .info-blocks__wrapper .info-block::after {
-    -webkit-transform: translateX(6px);
-    -ms-transform: translateX(6px);
-    transform: translateX(6px);
-  }
-  .available-course__start .info-blocks__wrapper .info-block:first-child .info-block__icon {
-    width: 16px;
-    height: 16px;
-    -webkit-transform: translate(-1px, 3px);
-    -ms-transform: translate(-1px, 3px);
-    transform: translate(-1px, 3px);
-  }
-  .available-course__start .info-blocks__wrapper .info-block:first-child .info-block__text {
-    -webkit-transform: translate(7px, 4px);
-    -ms-transform: translate(7px, 4px);
-    transform: translate(7px, 4px);
-  }
-  .available-course__start .info-blocks__wrapper .info-block:last-child {
-    -webkit-transform: translate(6px, 3px);
-    -ms-transform: translate(6px, 3px);
-    transform: translate(6px, 3px);
-  }
-  .available-course__title {
-    margin-top: 4px;
-  }
-  .available-course__type .outline-text__content .outline-text__text {
-    padding: 1px 10px;
-    margin-top: 5px;
-  }
-  .available-course__desc {
-    margin-top: 34px;
-  }
-  .available-course__info .info-blocks__wrapper {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-transform: translateY(-7px);
-    -ms-transform: translateY(-7px);
-    transform: translateY(-7px);
-  }
-  .available-course__info .info-blocks__wrapper .info-block {
-    margin-top: 0;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    position: relative;
-    /* 1 блок */
-    /* 2 блок */
-    /* 3 блок */
-    /* Разделитель между блоками */
-  }
-  .available-course__info .info-blocks__wrapper .info-block:first-child .info-block__text {
-    font-size: 12px;
-  }
-  .available-course__info .info-blocks__wrapper .info-block:first-child .info-block__text .info-block__icon {
-    width: 15px;
-    height: 17px;
-    margin-right: 11px;
-  }
-  .available-course__info .info-blocks__wrapper .info-block:nth-child(2) {
-    margin-top: 0;
-  }
-  .available-course__info .info-blocks__wrapper .info-block:nth-child(2) .info-block__text {
-    font-size: 12px;
-  }
-  .available-course__info .info-blocks__wrapper .info-block:nth-child(2) .info-block__text .info-block__icon {
-    width: 22px;
-    height: 17px;
-    margin-right: 11px;
-    -webkit-transform: translate(2px, -1px);
-    -ms-transform: translate(2px, -1px);
-    transform: translate(2px, -1px);
-    margin-right: 11px;
-  }
-  .available-course__info .info-blocks__wrapper .info-block:last-child::after {
-    display: none;
-  }
-  .available-course__info .info-blocks__wrapper .info-block::after {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    content: "";
-    width: 2px;
-    height: 18px;
-    background-color: rgba(255, 255, 255, 0.5);
-    position: relative;
-    top: 0;
-    margin: 0 auto;
-    right: calc(0vw);
-  }
-  .available-course__side .available-course__image {
-    margin: 0 auto;
-    width: 100%;
-  }
-  .available-course__side .available-course__image img {
-    width: 350px;
-  }
-  .progress-bar__text:last-child {
-    -webkit-transform: translateX(-4px);
-    -ms-transform: translateX(-4px);
-    transform: translateX(-4px);
-  }
-  .progress-bar__progress {
-    width: calc(100% - 55px);
-  }
-}
-
-@media (min-width: 768px) {
-  .open-mobile-menu {
-    display: block !important;
-  }
-  /* Body */
-  .body {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    position: relative;
-  }
-  .body__wrapper {
-    width: calc(100% - 70px);
-    padding-bottom: 0;
-    margin-left: 70px;
+  .courses__date img {
+    display: block;
     position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 35px;
+    height: 24px;
   }
-  /* Хедер */
-  .header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    background-color: white;
+  .courses__title {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .courses__type {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .courses__desc {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .progress-bar__text {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .date__item {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .info {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    z-index: 1;
-    height: 100px;
-    width: 100%;
-    padding: 0 0 0 40px;
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 41px;
-    /* Название */
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
   }
-  .header__item h3 {
-    -webkit-transform: translate(-2px, 5px);
-    -ms-transform: translate(-2px, 5px);
-    transform: translate(-2px, 5px);
+  .info__item {
+    font-size: 12px;
+    min-width: auto;
+    margin: 0 14px;
   }
-  /* Список с курсами */
-  .available-courses__main {
-    margin-top: 140px;
-    height: auto;
+  .info__item::after {
+    display: block;
   }
-  /* Колонка с курсами */
-  .available-course {
-    margin-top: 30px;
-    /* Левая часть колонки */
-    /* Колонка с датой */
-    /* Название Курса */
-    /* Тип курса */
-    /* Подзаголовок */
-    /* Прогресс бар */
-    /* О курсе */
-    /* Фоновая картинка */
-    /* Первая колонка */
-    /* Вторая колонка */
-  }
-  .available-course__wrapper {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    overflow: hidden;
-    position: relative;
-    padding: 20px;
-    height: auto;
-  }
-  .available-course__main {
-    max-width: 400px;
-  }
-  .available-course__start {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    margin-bottom: 0;
-    /* Картинка справа */
-  }
-  .available-course__start .info-blocks .info-blocks__wrapper .info-block {
-    /* 1 колонка */
-    /* 2 колонка */
-    /* Разделитель между колонками */
-  }
-  .available-course__start .info-blocks .info-blocks__wrapper .info-block__text {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 23px;
-    -webkit-transform: translate(6px, 0);
-    -ms-transform: translate(6px, 0);
-    transform: translate(6px, 0);
-  }
-  .available-course__start .info-blocks .info-blocks__wrapper .info-block:first-child .info-block__text span {
-    margin-left: 7px;
-    font-weight: 500;
-    color: rgba(128, 128, 128, 0.8);
-  }
-  .available-course__start .info-blocks .info-blocks__wrapper .info-block:nth-child(2) .info-block__text span {
-    margin-left: 7px;
-    font-weight: 500;
-    color: rgba(128, 128, 128, 0.8);
-  }
-  .available-course__start .info-blocks .info-blocks__wrapper .info-block::after {
-    width: 2px;
-    height: 10px;
-    content: "";
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 5px auto 0;
-    right: 2px;
-    background-color: rgba(128, 128, 128, 0.5);
-    -webkit-transform: translate(10px, 3px);
-    -ms-transform: translate(10px, 3px);
-    transform: translate(10px, 3px);
-  }
-  .available-course__start img {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 81px;
-    height: 56px;
-  }
-  .available-course__title {
-    font-weight: 500;
-    font-size: 42px;
-    line-height: 48px;
-    margin-top: 15px;
-  }
-  .available-course__type .outline-text__content .outline-text__text {
-    font-weight: normal;
+  .type__text {
     font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
     line-height: 16px;
-    padding: 5px 10px;
-  }
-  .available-course__desc {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 23px;
-    margin-top: 20px;
-  }
-  .available-course__progress .progress-bar__text {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 23px;
-    margin-top: 5px;
-    display: inline-block;
-  }
-  .available-course__progress .progress-bar__progress {
-    width: calc(100% - 60px);
-  }
-  .available-course__info .info-blocks__wrapper .info-block {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    /* 1 колонка */
-    /* 2 колонка */
-    /* 3 колонка */
-  }
-  .available-course__info .info-blocks__wrapper .info-block:first-child .info-block__text {
-    font-size: 14px;
-  }
-  .available-course__info .info-blocks__wrapper .info-block:first-child .info-block__text .info-block__icon {
-    -webkit-transform: translate(-5px, 0);
-    -ms-transform: translate(-5px, 0);
-    transform: translate(-5px, 0);
-  }
-  .available-course__info .info-blocks__wrapper .info-block:nth-child(2) .info-block__text {
-    font-size: 14px;
-  }
-  .available-course__info .info-blocks__wrapper .info-block:nth-child(2) .info-block__text .info-block__icon {
-    -webkit-transform: translate(-5px, 0);
-    -ms-transform: translate(-5px, 0);
-    transform: translate(-5px, 0);
-  }
-  .available-course__info .info-blocks__wrapper .info-block:last-child .info-block__text {
-    font-size: 14px;
-  }
-  .available-course__info .info-blocks__wrapper .info-block:last-child .info-block__text .info-block__icon {
-    -webkit-transform: translate(-5px, 0);
-    -ms-transform: translate(-5px, 0);
-    transform: translate(-5px, 0);
-  }
-  .available-course__side .available-course__image img {
-    width: 420px;
-    -webkit-transform: translate(25%, 20px);
-    -ms-transform: translate(25%, 20px);
-    transform: translate(25%, 20px);
-  }
-  .available-course:first-child {
-    margin-top: 0;
-  }
-  .available-course:last-child {
-    margin-bottom: 70px;
+    letter-spacing: 0em;
+    text-align: left;
   }
 }
 
-@media (min-width: 1309px) {
-  /* Body */
-  .body__wrapper {
-    padding-left: 40px;
-    max-width: 100%;
+@media (min-width: 600px) {
+  .courses__about {
+    padding: 23px 30px 40px 30px;
   }
-  /* Колонка с курсами */
-  .available-course {
-    /* Левая часть колонки */
-    /* Колонка с датой начала */
-    /* Тип курса */
-    /* Прогресс бар */
-    /* О курсе */
-    /* Фоновая картинка */
+  .courses__date img {
+    width: 80px;
+    height: 56px;
   }
-  .available-course__wrapper {
-    padding: 24px 32px 0 31px;
+  .courses__desc {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 20px;
   }
-  .available-course__main {
-    width: 400px;
+  .courses__image {
+    display: none;
   }
-  .available-course__start {
-    /* Картинка справа */
+  .courses__content {
+    margin-bottom: 20px;
   }
-  .available-course__start .info-blocks__wrapper .info-block {
-    /* 1 колонка */
-    /* 2 колонка */
-    /* 3 колонка */
-    /* Разделитель между колонками */
+  .courses__date {
+    margin-bottom: 0;
   }
-  .available-course__start .info-blocks__wrapper .info-block:first-child .info-block__icon {
-    -webkit-transform: translate(2px, 1px);
-    -ms-transform: translate(2px, 1px);
-    transform: translate(2px, 1px);
-  }
-  .available-course__start .info-blocks__wrapper .info-block:nth-child(2) {
-    -webkit-transform: translate(12px, 4px);
-    -ms-transform: translate(12px, 4px);
-    transform: translate(12px, 4px);
-  }
-  .available-course__start .info-blocks__wrapper .info-block:nth-child(3) {
-    position: relative;
-    top: -3px;
-    left: 5px;
-  }
-  .available-course__start .info-blocks__wrapper .info-block::after {
-    -webkit-transform: translate(8px, 0px);
-    -ms-transform: translate(8px, 0px);
-    transform: translate(8px, 0px);
-  }
-  .available-course__start img {
-    top: 30px;
+  .courses__date img {
+    top: 23px;
     right: 30px;
-    -webkit-transform: translateY(-2px);
-    -ms-transform: translateY(-2px);
-    transform: translateY(-2px);
   }
-  .available-course__type .outline-text__content .outline-text__text {
-    margin-top: 6px;
+  .progress-bar__text {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
   }
-  .available-course .progress-bar__progress {
-    width: calc(100% - 163px);
+}
+
+@media (min-width: 851px) {
+  .available-courses {
+    padding: 0 0 0 40px !important;
   }
-  .available-course__info .info-blocks__wrapper .info-block {
-    /* 1 колонка */
-    /* 2 колонка */
-    /* 3 колонка */
+  .courses__main {
+    margin: 0;
+    padding: 0;
   }
-  .available-course__info .info-blocks__wrapper .info-block:first-child .info-block__text {
-    -webkit-transform: translate(0px, 3px);
-    -ms-transform: translate(0px, 3px);
-    transform: translate(0px, 3px);
+  .courses__wrapper {
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    margin: 0 40px;
+    border-radius: 15px;
   }
-  .available-course__info .info-blocks__wrapper .info-block:first-child .info-block__icon {
-    min-width: 20px;
-    min-height: 20px;
-    -webkit-transform: translateY(-3px);
-    -ms-transform: translateY(-3px);
-    transform: translateY(-3px);
+  .courses__title {
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: left;
   }
-  .available-course__info .info-blocks__wrapper .info-block:nth-child(2) .info-block__text .info-block__icon {
-    min-width: 20px;
-    min-height: 20px;
+  .courses__image {
+    display: block;
   }
-  .available-course__info .info-blocks__wrapper .info-block:last-child {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+}
+
+@media (min-width: 1000px) {
+  .header__box {
+    padding: 20px 0 0 40px;
+    height: 100px;
+    background-color: white;
   }
-  .available-course__info .info-blocks__wrapper .info-block:last-child .info-block__text {
-    white-space: nowrap;
+  .header__box h3 {
+    font-size: 37px;
+    -webkit-transform: translate(0px, 15px);
+    -ms-transform: translate(0px, 15px);
+    transform: translate(0px, 15px);
   }
-  .available-course__side .available-course__image img {
-    width: 420px;
-    -webkit-transform: translate(80px, 0px);
-    -ms-transform: translate(80px, 0px);
-    transform: translate(80px, 0px);
+  .body__wrapper {
+    width: calc(100% - 70px);
+    margin-left: 70px;
+  }
+  .courses__about {
+    max-width: 400px;
+  }
+  .courses__image img {
+    width: 458px;
+    height: auto;
+  }
+}
+
+@media (min-width: 1400px) {
+  .available-courses__list {
+    width: 1181px;
+  }
+  .courses__about {
+    min-width: 460px;
+  }
+  .courses__title {
+    -webkit-transform: translateY(11px);
+    -ms-transform: translateY(11px);
+    transform: translateY(11px);
+  }
+  .courses__type {
+    margin-top: 14px;
+  }
+  .courses__progress {
+    margin-top: 31px;
+  }
+  .type__text {
+    padding: 3px 9px;
+    border: 1px solid;
+    border-radius: 5px;
+  }
+  .info {
+    margin-top: 7px;
+    -webkit-transform: translateX(7px);
+    -ms-transform: translateX(7px);
+    transform: translateX(7px);
+  }
+  .tabs__wrapper {
+    width: 1181px;
   }
 }
