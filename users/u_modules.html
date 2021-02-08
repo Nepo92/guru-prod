@@ -37,7 +37,7 @@
 
 	<!-- Мобильное меню -->
 
- <div class="mobile-nav">
+	<div class="mobile-nav">
 		<div class="mobile-nav__box block menu__inner mobile-menu">
 
 			<div class="mobile-nav__wrapper block-wrapper mobile-menu__inner">
@@ -128,9 +128,9 @@
 
 					<div class=" open-mobile-menu__exit nav__item">
 						<a href="/logout" class="main-nav__item-wrapper">
-							<div class="main-nav__item main-nav__item_exit nav__icon"">
-                    </div>
-                    <div class=" main-nav__item-title">Выйти из аккаунта</div>
+							<div class="main-nav__item main-nav__item_exit nav__icon">
+							</div>
+							<div class=" main-nav__item-title">Выйти из аккаунта</div>
 						</a>
 					</div>
 				</div>
@@ -140,7 +140,7 @@
 
 		<script src="../js/jquery-3.4.1.min.js"></script>
 		<script src="../js/main.js"></script>
-	</div> 
+	</div>
 
 	<!-- Меню -->
 
@@ -183,9 +183,9 @@
 				</div>
 			</div>
 		</div>
-	</div> 
+	</div>
 
-	 <div class="body__wrapper">
+	<div class="body__wrapper">
 		<div class="body__header">
 			<header class="header">
 				<div class="header__box block">
@@ -221,14 +221,14 @@
 
 
 						<div class="content-element module-top">
-							<div class="content-element__wrapper module-top__wrapper"> 
+							<div class="content-element__wrapper module-top__wrapper">
 
 								<!--                                <div class="logo">-->
 								<!--                                    <img src="/img/sa-logo.svg" alt="">-->
 								<!--                                </div>-->
 
 
-								 <div class="content-element__side module-top__inner">
+								<div class="content-element__side module-top__inner">
 									<div class="content-element__header -gap_4 module__content">
 										<div class="content-element__header-wrapper">
 											<div class="content-element__header-item module-top__about module-about">
@@ -250,7 +250,7 @@
 															th:data-startDate="${course.fullStartTime}">Когда начинается</span>
 													</div>
 
-													<img src="../img/SweetsAcademy.svg">
+													<img src="../img/SweetsAcademy.svg" alt="sweetsAcademy">
 												</div>
 												<div class="content-element__header-side">
 													<div class="info-blocks">
@@ -287,6 +287,46 @@
 										</div>
 									</div>
 								</div>
+							</div>
+						</div>
+
+						<div class="block-delimiter"></div>
+
+						<div class="module-vk">
+							<div class="module-vk__inner">
+								<div class="module-vk__group">
+									<div class="module-vk__title">
+										<p>Групповой чат
+
+										<div class="module-vk__icon">
+											<svg>
+												<use xlink:href='../sprite.svg#vk'></use>
+											</svg>
+										</div>
+
+										</p>
+									</div>
+
+									<p class="module-vk__description">
+										Там вы можете общаться с кураторами и однокурсниками,
+										делиться впечатлениями и спрашивать если что-то не получается
+									</p>
+								</div>
+
+								<div class="module-vk__dialog">
+
+									<img src="../img/dialog.svg" alt="dialog">
+
+									<div class="module-vk__dialog-typing">
+										<img src="../img/dialog-typing.png" alt="dialog-typing">
+										<div class="module-vk__type">
+											<div class="module-vk__typing"></div>
+											<div class="module-vk__typing"></div>
+											<div class="module-vk__typing"></div>
+										</div>
+									</div>
+								</div>
+								<a class="module-vk__btn" href="/">Перейти в чат</a>
 							</div>
 						</div>
 
@@ -344,43 +384,116 @@
 
 													<div class="content-element__header-btn module-header__btn-inner">
 
-														<div class="module-header__rating">
+														<div class="module-header__raiting">
 															<svg class="module-header__icon">
 																<use xlink:href="../sprite.svg#star-solid"></use>
 															</svg>
-	
+
 															4.5
 														</div>
-						
+
 
 														<div class="btn btn_default " th:classappend="'btn_' + ${module.statusCode}">
 
 															<div class="btn__content btn__content_medium module-header__status">
+
+
 																<th:block th:if="${module.statusId != 1 && module.statusId != 2}">
-																	<span class="btn__title btn__title_small btn__icon module-header__status-btn"
+																	<span class="btn__title btn__title_small btn__icon module-header__status-info"
 																		th:classappend="'btn__icon_' + ${module.statusCode}">
-																		<span class="btn_title-text btn_title-text_small mo-dule-status__status"
-																			th:utext="${module.enabled ? module.statusTitle : 'Недоступен'}">
 
-																			<svg class="module-status__icon">
-																				<use xlink:href='../sprite.svg#check-circle-solid'></use>
-																			</svg>
+																		<span class="sucess">
+																			<span class="sucess__icon">
+																				<svg>
+																					<use xlink:href='../sprite.svg#check-circle-solid'></use>
+																				</svg>
+																			</span>
 
-																			Статус 1
+																			<span class="sucess__raiting raiting-icon">
+																				<svg>
+																					<use xlink:href="../sprite.svg#star-solid"></use>
+																				</svg>
 
-																			<div class="module-header__rating">
+																				4.5
+																			</span>
+
+																			<span class="btn_title-text btn_title-text_small sucess__text"
+																				th:utext="${module.enabled ? module.statusTitle : 'Недоступен'}">
+																				Поверено
+
+																			</span>
+																		</span>
+
+																		<span class="on-checked">
+																			<span class="on-checked__icon">
+																				<svg>
+																					<use xlink:href='../sprite.svg#clock-regular'></use>
+																				</svg>
+																			</span>
+
+																			<span class="btn_title-text btn_title-text_small on-checked__text"
+																				th:utext="${module.enabled ? module.statusTitle : 'Недоступен'}">
+																				На проверке
+
+																			</span>
+																		</span>
+
+																		<span class="process">
+																			<span class="process__icon">
+																				<svg>
+																					<use xlink:href='../sprite.svg#play'></use>
+																				</svg>
+																			</span>
+
+																			<span class="btn_title-text btn_title-text_small process__text"
+																				th:utext="${module.enabled ? module.statusTitle : 'Недоступен'}">
+																				Прохожу
+
+																			</span>
+																		</span>
+
+																		<span class="not-start">
+																			<span class="not-start__icon">
+																				<svg>
+																					<use xlink:href='../sprite.svg#play'></use>
+																				</svg>
+																			</span>
+
+																			<span class="btn_title-text btn_title-text_small not-start__text"
+																				th:utext="${module.enabled ? module.statusTitle : 'Недоступен'}">
+																				Прохожу
+
+																			</span>
+																		</span>
+
+
+																		<div class="unreachable">
+																			<div class="module-status">
+																				<svg class="">
+																					<use xlink:href='../sprite.svg#check-circle-solid'></use>
+																				</svg>
+																			</div>
+
+																			<span>
 																				<svg class="module-header__icon">
 																					<use xlink:href="../sprite.svg#star-solid"></use>
 																				</svg>
-						
+
 																				4.5
-																			</div>
+																			</span>
 
-																		</span>
+																			<span class="btn_title-text btn_title-text_small module-status__status"
+																				th:utext="${module.enabled ? module.statusTitle : 'Недоступен'}">
+																				На проверке
+
+																			</span>
+																		</div>
+
 																	</span>
-																</th:block> 
 
-															<!-- <th:block th:unless="${module.statusId != 1 && module.statusId != 2}">
+																</th:block>
+
+																<!-- <th:block th:unless="${module.statusId != 1 && module.statusId != 2}">
 																	<span class="btn__title btn__title_small">
 																		<span class="btn_title-text btn_title-text_small module-header__status-btn"
 																			th:utext="${module.enabled ? module.statusTitle : 'Недоступен'}">Стаус 2</span>
@@ -392,20 +505,25 @@
 
 													</div>
 
-													<div class="content-element__header-btn module-header__btn  module-header__btn-inner">
+													<div
+														class="content-element__header-btn module-header__btn  module-header__btn-inner not-start">
 														<th:block th:if="${module.enabled}">
 															<a th:href="'/user/courses/' + ${idDeal} + '/' + ${module.id} + '/'"
 																class="btn btn_outline">
 																<div class="btn__content btn__content_large module-header__btn">
 																	<span class="btn__title btn__title_small">
-																		<span class="btn_title-text btn_title-text_small module-header__status-btn">Перейти
-																			к урокам</span>
+																		<span class="btn_title-text btn_title-text_small module-header__status-btn">
+
+																			Перейти
+																			к урокам
+
+																		</span>
 																	</span>
 																</div>
 															</a>
 														</th:block>
 
-														 <!-- <th:block th:unless="${module.enabled}">
+														<!-- <th:block th:unless="${module.enabled}">
 															<button class="btn btn_outline" disabled>
 																<div class="btn__content btn__content_large">
 																	<span class="btn__title btn__title_small">
@@ -434,162 +552,20 @@
 									</label>
 
 									<div class="content-element__main module__main module-main">
-										<div class="content-element__content">
+										<div class="content-element__content module-main__wrapper-inner">
 											<div class="content-element__content__wrapper module-main__wrapper">
 												<div class="content-element__content-main module-main__inner">
 													<div class="content-element__text content-element__text_short module-main__text-wrapper">
-														<div class="content-element__text-wrapper module-main__text" th:utext="${module.description}">
+														<div class="content-element__text-wrapper module-main__text"
+															th:utext="${module.description}">
 															Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit incidunt aut eos est,
 															architecto nobis voluptatum libero ut
 														</div>
 													</div>
 												</div>
-												<div class="content-element__content-side ">
+												<div class="content-element__content-side module-main__side">
 													<div class="content-element__image module-main__image">
-														<img th:src="'/' + ${module.logoPath}" alt="">
-														<img src="../img/preview.png" alt="">
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="content-element module">
-								<div class="content-element__wrapper module__column">
-									<div class="content-element__side content-element__side_bordered module__wrapper">
-										<div class="content-element__header">
-											<div class="content-element__header-wrapper module__header module-header">
-
-												<div class="content-element__header-item module-header__item">
-													<div class="content-element__header-main">
-														<div class="content-element__header-element">
-															<span
-																class="content-element__title content-element__title_blue title title-h4 module-header__id"
-																th:utext="${stat.count}">1</span>
-														</div>
-													</div>
-												</div>
-
-												<div class="content-element__header-item module-header__item">
-													<div class="content-element__header-main -gap_2 module-header__item-wrapper">
-														<div class="content-element__header-element module-header__title">
-															<span class="content-element__title title title-h5 " th:utext="${module.name}">Холодный
-																малиновый чизкейк</span>
-														</div>
-													</div>
-
-													<div class="content-element__header-side">
-														<div class="info-blocks">
-															<div class="info-blocks__wrapper module-header__content">
-																<div class="info-block info-block_icon info-block_icon_video module-header__elem">
-																	<span class="info-block__text" th:utext="${module.lessonsCount} + ' урок'">6
-																		уроков</span>
-																</div>
-																<div class="info-block info-block_icon info-block_icon_work module-header__elem">
-																	<span class="info-block__text"
-																		th:utext="${module.homeworkCount} + ' домашнее задание'">Домашнее задание</span>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-
-											</div>
-
-											<div class="content-element__header-item module-header__btn-container">
-
-												<div class="content-element__header-main content-element__header-buttons module-header__buttons"
-													th:if="${module.allowStart && module.enabled}">
-
-													<div class="content-element__header-btn module-header__btn-inner">
-														<div class="btn btn_default " th:classappend="'btn_' + ${module.statusCode}">
-
-															<div class="btn__content btn__content_medium module-header__status">
-																<th:block th:if="${module.statusId != 1 && module.statusId != 2}">
-																	<span class="btn__title btn__title_small btn__icon module-header__status-btn"
-																		th:classappend="'btn__icon_' + ${module.statusCode}">
-																		<span class="btn_title-text btn_title-text_small"
-																			th:utext="${module.enabled ? module.statusTitle : 'Недоступен'}">
-																		
-																			<svg class="module-status__icon">
-																				<use xlink:href='../sprite.svg#check-circle-solid'></use>
-																			</svg>
-
-
-
-																		</span>
-																	</span>
-																</th:block> 
-
-															<!-- <th:block th:unless="${module.statusId != 1 && module.statusId != 2}">
-																	<span class="btn__title btn__title_small">
-																		<span class="btn_title-text btn_title-text_small module-header__status-btn"
-																			th:utext="${module.enabled ? module.statusTitle : 'Недоступен'}">Стаус 2</span>
-																	</span>
-																</th:block> -->
-															</div>
-
-														</div>
-
-													</div>
-
-													<div class="content-element__header-btn module-header__btn  module-header__btn-inner">
-														<th:block th:if="${module.enabled}">
-															<a th:href="'/user/courses/' + ${idDeal} + '/' + ${module.id} + '/'"
-																class="btn btn_outline">
-																<div class="btn__content btn__content_large module-header__btn">
-																	<span class="btn__title btn__title_small">
-																		<span class="btn_title-text btn_title-text_small module-header__status-btn">Перейти
-																			к урокам</span>
-																	</span>
-																</div>
-															</a>
-														</th:block>
-
-														 <!-- <th:block th:unless="${module.enabled}">
-															<button class="btn btn_outline" disabled>
-																<div class="btn__content btn__content_large">
-																	<span class="btn__title btn__title_small">
-																		<span class="btn_title-text btn_title-text_small">Перейти
-																			к урокам</span>
-																	</span>
-																</div>
-															</button>
-														</th:block>  -->
-													</div>
-												</div>
-
-												<div class="module__lessons-closed module-header__warning"
-													th:if="${!(module.allowStart && module.enabled)}">
-													Урок будет доступен при выполнении домашнего задания прошлого
-													модуля!
-												</div>
-											</div>
-
-										</div>
-									</div>
-
-									<input type="checkbox" id="module__checkbox2" class="module__checkbox">
-									<label for="module__checkbox2" class="module__roll-up roll-up">
-										<span class="roll-up__text">Свернуть</span>
-									</label>
-
-									<div class="content-element__main module__main module-main">
-										<div class="content-element__content">
-											<div class="content-element__content__wrapper module-main__wrapper">
-												<div class="content-element__content-main module-main__inner">
-													<div class="content-element__text content-element__text_short module-main__text-wrapper">
-														<div class="content-element__text-wrapper module-main__text" th:utext="${module.description}">
-															Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit incidunt aut eos est,
-															architecto nobis voluptatum libero ut
-														</div>
-													</div>
-												</div>
-												<div class="content-element__content-side module-main__wrapper">
-													<div class="content-element__image module-main__image">
-														<img th:src="'/' + ${module.logoPath}" alt="">
+														<!-- <img th:src="'/' + ${module.logoPath}" alt=""> -->
 														<img src="../img/preview.png" alt="">
 													</div>
 												</div>
@@ -600,7 +576,7 @@
 							</div>
 
 						</th:block>
-					
+
 
 						<!--                        <div class="content-element">-->
 						<!--                            <div class="content-element__wrapper">-->
@@ -676,16 +652,458 @@
 						<!--                                </div>-->
 						<!--                            </div>-->
 						<!--                        </div>-->
+
+
+						<div class="block-delimiter"></div>
+
+						<div class="available-courses__list">
+
+							<a href="156388/" class="course__item">
+
+								<div class="available-course__wrapper courses" style="background-color:#ff7d52;">
+									<div class="available-course__main course__about">
+										<div class="available-course__start -gap_4 courses__date">
+						
+
+											<img src="../img/SweetsAcademy.svg" alt="sweetsAcademy">
+										</div>
+
+										<div class="available-course__title -gap_2 courses__title">Пряники Домашние</div>
+										<div class="available-course__type -gap_3 courses__type type">
+											<div class="outline-text">
+												<div class="outline-text__content outline-text__content_dark">
+
+													<div class="outline-text__text type__text">Онлайн-курс</div>
+												</div>
+											</div>
+										</div>
+										<div class="available-course__desc courses__desc">
+											Какой-то подзаголовок
+										</div>
+
+			
+										<div class="available-course__info">
+											<div class="info-blocks">
+												<div class="info-blocks__wrapper courses__content info">
+													<div class="info-block info-block_icon info-block_icon_module info__item">
+														<span class="info-block__text">2 модулей</span>
+													</div>
+													<div class="info-block info-block_icon info-block_icon_video info__item">
+														<span class="info-block__text">2 урок</span>
+													</div>
+													<div class="info-block info-block_icon info-block_icon_work info__item">
+														<span class="info-block__text">2 заданий</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="available-course__side">
+										<div class="available-course__image courses__image">
+											<img src="../img/bg.png" alt="bg">
+											<a class="courses__open" href="">Открыть
+												<svg>
+													<use xlink:href='../sprite.svg#arrow-right'></use>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+							</a>
+
+				
+
+						</div>
+
+						<div class="sertifikat">
+							<div class="sertifikat__inner">
+								<div class="sertifikat__header">
+									<p class="sertifikat__title">
+										Сертификат
+									</p>
+
+									<a class="sertifikat__btn" href="/">
+										<svg>
+											<use xlink:href='../sprite.svg#download'></use>
+										</svg>
+										Скачать
+									</a>
+
+								</div>
+
+
+								<div class="sertifikat__content">
+
+									<div class="sertifikat__estimation">
+
+										<p class="sertifikat__headline">Оцените курс</p>
+
+
+										<div class="sertificat__raiting serifickat-raiting">
+											<p class="sertifikat-raiting__name">
+												Программа курса
+											</p>
+
+
+											<div class="sertifikat-raiting__programm">
+												<div class="sertifikat-raiting__item">
+													<svg>
+														<use xlink:href='../sprite.svg#star-solid'></use>
+													</svg>
+													1
+												</div>
+
+												<div class="sertifikat-raiting__item">
+													<svg>
+														<use xlink:href='../sprite.svg#star-solid'></use>
+													</svg>
+													2
+												</div>
+
+												<div class="sertifikat-raiting__item">
+													<svg>
+														<use xlink:href='../sprite.svg#star-solid'></use>
+													</svg>
+													3
+												</div>
+
+												<div class="sertifikat-raiting__item">
+													<svg>
+														<use xlink:href='../sprite.svg#star-solid'></use>
+													</svg>
+													4
+												</div>
+
+												<div class="sertifikat-raiting__item">
+													<svg>
+														<use xlink:href='../sprite.svg#star-solid'></use>
+													</svg>
+													5
+												</div>
+
+												<div class="sertifikat-raiting__item">
+													<svg>
+														<use xlink:href='../sprite.svg#star-solid'></use>
+													</svg>
+													6
+												</div>
+
+												<div class="sertifikat-raiting__item">
+													<svg>
+														<use xlink:href='../sprite.svg#star-solid'></use>
+													</svg>
+													7
+												</div>
+
+												<div class="sertifikat-raiting__item">
+													<svg>
+														<use xlink:href='../sprite.svg#star-solid'></use>
+													</svg>
+													8
+												</div>
+
+												<div class="sertifikat-raiting__item">
+													<svg>
+														<use xlink:href='../sprite.svg#star-solid'></use>
+													</svg>
+													9
+												</div>
+
+												<div class="sertifikat-raiting__item">
+													<svg>
+														<use xlink:href='../sprite.svg#star-solid'></use>
+													</svg>
+													10
+												</div>
+											</div>
+
+										</div>
+
+										<div class="sertifikat__raiting serifickat-raiting">
+											<p class="sertifikat-raiting__name">
+												Работа куратора
+											</p>
+
+
+											<div class="sertifikat-raiting__programm">
+												<div class="sertifikat-raiting__item">
+													<svg>
+														<use xlink:href='../sprite.svg#star-solid'></use>
+													</svg>
+													1
+												</div>
+
+												<div class="sertifikat-raiting__item">
+													<svg>
+														<use xlink:href='../sprite.svg#star-solid'></use>
+													</svg>
+													2
+												</div>
+
+												<div class="sertifikat-raiting__item">
+													<svg>
+														<use xlink:href='../sprite.svg#star-solid'></use>
+													</svg>
+													3
+												</div>
+
+												<div class="sertifikat-raiting__item">
+													<svg>
+														<use xlink:href='../sprite.svg#star-solid'></use>
+													</svg>
+													4
+												</div>
+
+												<div class="sertifikat-raiting__item">
+													<svg>
+														<use xlink:href='../sprite.svg#star-solid'></use>
+													</svg>
+													5
+												</div>
+
+												<div class="sertifikat-raiting__item">
+													<svg>
+														<use xlink:href='../sprite.svg#star-solid'></use>
+													</svg>
+													6
+												</div>
+
+												<div class="sertifikat-raiting__item">
+													<svg>
+														<use xlink:href='../sprite.svg#star-solid'></use>
+													</svg>
+													7
+												</div>
+
+												<div class="sertifikat-raiting__item">
+													<svg>
+														<use xlink:href='../sprite.svg#star-solid'></use>
+													</svg>
+													8
+												</div>
+
+												<div class="sertifikat-raiting__item">
+													<svg>
+														<use xlink:href='../sprite.svg#star-solid'></use>
+													</svg>
+													9
+												</div>
+
+												<div class="sertifikat-raiting__item">
+													<svg>
+														<use xlink:href='../sprite.svg#star-solid'></use>
+													</svg>
+													10
+												</div>
+											</div>
+
+										</div>
+
+
+									</div>
+
+
+									<div class="sertifikat__feedback sertifikat-feedback">
+										<form action="">
+
+											<p class="sertifikat-feedback__headline">
+												Пожалуйста, расскажите почему поставили такую оценку?
+											</p>
+
+											<textarea class="sertifikat-feedback__textarea"></textarea>
+
+											<div class="sertifikat-feedback">
+												<div class="sertifikat-feedback__controls">
+
+													<button class="sertifikat-feedback__btn">Отправить</button>
+
+													<button class="sertifikat-feedback__btn ">Закрыть</button>
+
+												</div>
+											</div>
+
+										</form>
+
+
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="estimation">
+							<div class="estimation__inner">
+								<p>Пожалуйста, оцените онлайн-курс</p>
+
+								<ul class="estimation__list">
+									<li class="estimation__item">
+										<svg>
+											<use xlink:href='../sprite.svg#sadness'></use>
+										</svg>
+										1
+									</li>
+									<li class="estimation__item">
+										<svg>
+											<use xlink:href='../sprite.svg#sadness'></use>
+										</svg>
+										2
+									</li>
+									<li class="estimation__item">
+										<svg>
+											<use xlink:href='../sprite.svg#sadness'></use>
+										</svg>
+										3
+									</li>
+									<li class="estimation__item">
+										<svg>
+											<use xlink:href='../sprite.svg#sadness'></use>
+										</svg>
+										4
+									</li>
+									<li class="estimation__item">
+										<svg>
+											<use xlink:href='../sprite.svg#sadness'></use>
+										</svg>
+										5
+									</li>
+									<li class="estimation__item">
+										<svg>
+											<use xlink:href='../sprite.svg#sadness'></use>
+										</svg>
+										6
+									</li>
+									<li class="estimation__item">
+										<svg>
+											<use xlink:href='../sprite.svg#meh-solid'></use>
+										</svg>
+										7
+									</li>
+									<li class="estimation__item">
+										<svg>
+											<use xlink:href='../sprite.svg#meh-solid'></use>
+										</svg>
+										8
+									</li>
+									<li class="estimation__item">
+										<svg>
+											<use xlink:href='../sprite.svg#happiness'></use>
+										</svg>
+										9
+									</li>
+									<li class="estimation__item">
+										<svg>
+											<use xlink:href='../sprite.svg#happiness'></use>
+										</svg>
+										10
+									</li>
+								</ul>
+
+							</div>
+						</div>
+
+						<div class="estimation">
+							<div class="estimation__inner">
+								<p>Пожалуйста, оцените онлайн-курс</p>
+
+								<ul class="estimation__list">
+									<li class="estimation__item">
+										<svg>
+											<use xlink:href='../sprite.svg#sadness'></use>
+										</svg>
+										1
+									</li>
+									<li class="estimation__item">
+										<svg>
+											<use xlink:href='../sprite.svg#sadness'></use>
+										</svg>
+										2
+									</li>
+									<li class="estimation__item">
+										<svg>
+											<use xlink:href='../sprite.svg#sadness'></use>
+										</svg>
+										3
+									</li>
+									<li class="estimation__item">
+										<svg>
+											<use xlink:href='../sprite.svg#sadness'></use>
+										</svg>
+										4
+									</li>
+									<li class="estimation__item">
+										<svg>
+											<use xlink:href='../sprite.svg#sadness'></use>
+										</svg>
+										5
+									</li>
+									<li class="estimation__item">
+										<svg>
+											<use xlink:href='../sprite.svg#sadness'></use>
+										</svg>
+										6
+									</li>
+									<li class="estimation__item">
+										<svg>
+											<use xlink:href='../sprite.svg#meh-solid'></use>
+										</svg>
+										7
+									</li>
+									<li class="estimation__item">
+										<svg>
+											<use xlink:href='../sprite.svg#meh-solid'></use>
+										</svg>
+										8
+									</li>
+									<li class="estimation__item">
+										<svg>
+											<use xlink:href='../sprite.svg#happiness'></use>
+										</svg>
+										9
+									</li>
+									<li class="estimation__item">
+										<svg>
+											<use xlink:href='../sprite.svg#happiness'></use>
+										</svg>
+										10
+									</li>
+								</ul>
+
+							</div>
+						</div>
+
+
+						<div class="sertifikat">
+							<div class="sertifikat__inner">
+								<div class="sertifikat__header">
+									<p class="sertifikat__title">
+										Сертификат
+									</p>
+
+									<a class="sertifikat__btn" href="/">
+										<svg>
+											<use xlink:href='../sprite.svg#download'></use>
+										</svg>
+										Скачать
+									</a>
+
+								</div>
+
+
+								<div class="sertifikat__content">
+
+									<div class="sertifikat__image sertifikat-image">
+											<img src="../img/bg.png" alt="sertifikat">
+									</div>
+								</div>
+
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
-
-
 </body>
-
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
 
