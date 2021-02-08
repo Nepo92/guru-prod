@@ -1,0 +1,695 @@
+<html lang="ru" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Модули курса">
+
+	<title>Модули курса</title>
+
+	<!-- <link th:href="@{/css/u_main.css}" rel="stylesheet">
+    <link th:href="@{/css/gap.css}" rel="stylesheet">
+    <link th:href="@{/css/custom-tabs.css}" rel="stylesheet">
+    <link th:href="@{/css/available-course.css}" rel="stylesheet">
+    <link th:href="@{/css/info-blocks.css}" rel="stylesheet">
+    <link th:href="@{/css/progress-bar.css}" rel="stylesheet">
+    <link th:href="@{/css/btn.css}" rel="stylesheet">
+    <link th:href="@{/css/main-nav.css}" rel="stylesheet"> -->
+
+
+	<link href="../css/u_main.css" rel="stylesheet">
+	<link href="../css/gap.css" rel="stylesheet">
+	<link href="../css/custom-tabs.css" rel="stylesheet">
+	<link href="../css/available-course.css" rel="stylesheet">
+	<link href="../css/info-blocks.css" rel="stylesheet">
+	<link href="../css/progress-bar.css" rel="stylesheet">
+	<link href="../css/btn.css" rel="stylesheet">
+	<link href="../css/main-nav.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="../css/pages/u_modules.css">
+
+
+</head>
+
+<body class="body" onload="getCountdownOnUserModulesPage()">
+	<!-- <div th:replace="base :: user-nav"></div> -->
+
+
+	<!-- Мобильное меню -->
+
+ <div class="mobile-nav">
+		<div class="mobile-nav__box block menu__inner mobile-menu">
+
+			<div class="mobile-nav__wrapper block-wrapper mobile-menu__inner">
+
+				<div class="mobile-nav__main">
+
+					<div class="mobile-nav__items">
+
+						<div class="mobile-nav__items-wrapper mobile-menu__wrapper">
+
+							<div class="mobile-nav__item mobile-nav__item_menu mobile-menu__left">
+
+								<div js-open-mobile-menu class="mobile-menu mobile-menu__control">
+									<div class="mobile-menu__item mobile-menu__item_close">
+										<div class="mobile-menu__icon mobile-menu__icon_close"></div>
+									</div>
+									<div class="mobile-menu__item mobile-menu__item_open">
+										<div class="mobile-menu__icon mobile-menu__icon_open"></div>
+									</div>
+
+									<div class="mobile-menu__item mobile-menu__item">
+										Меню
+									</div>
+								</div>
+							</div>
+
+							<div class="mobile-nav__item mobile-nav__item_avatar mobile-menu__right">
+								<div class="avatar">
+									<div class="avatar__wrapper avatar__wrapper_xsmall">
+										<span class="avatar-image avatar-image_default mobile-menu__avatar">
+											<img src="../img/menu/image13.png" alt="avatar">
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="open-mobile-menu nav__wrapper nav" js-mobile-menu style="display: none">
+			<div class="open-mobile-menu__container">
+
+				<div class="main-nav__logo open-mobile-menu__logo menu__avatar nav__info">
+					<div class="main-nav__item-wrapper open-mobile-menu__item-wrapper">
+						<div class="main-nav__item-wrapper nav__item  nav__item-name">
+							<div class="main-nav__avatar menu__avatar">
+								<div class="avatar">
+									<div class="avatar__wrapper avatar__wrapper_large">
+										<span class="avatar-image avatar-image_large avatar-image_default">
+											<img src="../img/menu/image13.png" alt="avatar">
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="main-nav__avatar-desc">
+								<div class="main-nav__avatar-name nav__name">Агнаева Екатерина Викторовна</div>
+							</div>
+						</div>
+						<div class="open-mobile-menu__close menu__close" js-close-mobile-menu>
+							<svg width="20" height="20" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M8.25352 6.50015L12.6369 10.8835C13.1211 11.3677 13.1211 12.1527 12.6369 12.6369C12.1527 13.121 11.3677 13.121 10.8835 12.6369L6.50017 8.25352L2.11681 12.6369C1.63262 13.121 0.847605 13.121 0.363427 12.6369C-0.120745 12.1527 -0.120739 11.3677 0.36344 10.8835L4.74682 6.50015L0.363138 2.11651C-0.121041 1.63233 -0.121047 0.847327 0.363125 0.363144C0.847302 -0.121044 1.63232 -0.121049 2.1165 0.363133L6.50017 4.74678L10.8838 0.363133C11.368 -0.121049 12.153 -0.121044 12.6372 0.363144C13.1214 0.847327 13.1214 1.63233 12.6372 2.11651L8.25352 6.50015Z"
+									fill="black" />
+							</svg>
+						</div>
+					</div>
+				</div>
+
+				<div class="main-nav__list-items open-mobile-menu__list-items nav__list">
+
+					<div class="main-nav__items-wrapper nav__item">
+						<a href="/user/courses/" class="main-nav__item-wrapper">
+							<div class="main-nav__item main-nav__item_dashboard  main-nav__item_active">
+							</div>
+							<div class="main-nav__item-title">Мои курсы</div>
+						</a>
+					</div>
+
+					<div class="main-nav__items-wrapper nav__item nav__item">
+						<a href="/user/courses/" class="main-nav__item-wrapper">
+							<div class="main-nav__item main-nav__item_dashboard  main-nav__item_active  nav__icon">
+							</div>
+							<div class="main-nav__item-title">Мои курсы</div>
+						</a>
+					</div>
+
+					<div class=" open-mobile-menu__exit nav__item">
+						<a href="/logout" class="main-nav__item-wrapper">
+							<div class="main-nav__item main-nav__item_exit nav__icon"">
+                    </div>
+                    <div class=" main-nav__item-title">Выйти из аккаунта</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<script src="../js/jquery-3.4.1.min.js"></script>
+		<script src="../js/main.js"></script>
+	</div> 
+
+	<!-- Меню -->
+
+	<div class="main-nav main-nav_none menu">
+		<div class="main-nav__wrapper menu">
+
+			<div class="main-nav__logo">
+				<div class="main-nav__item-wrapper">
+					<div class="main-nav__item-wrapper">
+						<div class="main-nav__avatar">
+							<div class="avatar">
+								<div class="avatar__wrapper avatar__wrapper_large">
+									<span class="avatar-image avatar-image_large avatar-image_default menu__avatar">
+										<img src="../img/menu/image13.png" alt="avatar">
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="main-nav__avatar-desc nav__user">
+							<div class="main-nav__avatar-name nav__name">Агнаева Екатерина Викторовна</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="main-nav__list-items">
+				<div class="main-nav__items-wrapper">
+					<div class="main-nav__items-wrapper">
+						<a href="/user/courses/" class="main-nav__item-wrapper">
+							<div class="main-nav__item main-nav__item_dashboard  main-nav__item_active"></div>
+							<div class="main-nav__item-title">Мои курсы</div>
+						</a>
+					</div>
+				</div>
+				<div class="main-nav__items-wrapper">
+					<a href="/logout" class="main-nav__item-wrapper">
+						<div class="main-nav__item main-nav__item_exit"></div>
+						<div class="main-nav__item-title">Выход</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div> 
+
+	 <div class="body__wrapper">
+		<div class="body__header">
+			<header class="header">
+				<div class="header__box block">
+					<div class="header__wrapper block-wrapper">
+						<div class="header__main">
+							<div class="header__items">
+								<div class="header__items-wrapper">
+
+									<div class="header__item header__item_btn">
+										<a th:href="'/user/courses/' + ${idDeal} + '/' + ${idModule} + '/'"
+											class="btn btn_outline header__btn header-btn">
+											<div class="btn__content btn__content_large">
+												<span class="btn__title btn__title_small btn__icon btn__icon_arrow-left">
+													<span class="btn_title-text btn_title-text_small header-btn__text">
+														К списку уроков
+													</span>
+												</span>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+		</div>
+		<div class="body__content">
+
+			<div class="modules block -gap-inner-bottom_5 -gap-inner-top_5">
+				<div class="modules__wrapper block-wrapper">
+					<div class="modules__main">
+
+
+						<div class="content-element module-top">
+							<div class="content-element__wrapper module-top__wrapper"> 
+
+								<!--                                <div class="logo">-->
+								<!--                                    <img src="/img/sa-logo.svg" alt="">-->
+								<!--                                </div>-->
+
+
+								 <div class="content-element__side module-top__inner">
+									<div class="content-element__header -gap_4 module__content">
+										<div class="content-element__header-wrapper">
+											<div class="content-element__header-item module-top__about module-about">
+												<div class="content-element__header-main -gap_2 module-about__inner">
+													<div class="content-element__header-element module-about__title">
+														<span class="content-element__title title title-h2"
+															th:utext="${course.name}">Название</span>
+													</div>
+													<div class="content-element__header-element module-about__type module-type">
+														<div class="outline-text">
+															<div class="outline-text__content outline-text__content_dark">
+																<div class="outline-text__text module-type__text" th:utext="${course.type}">Тип курса
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="content-element__header-element module-about__start">
+														<span class="content-element__title countdown css_countdown" th:id="countdown"
+															th:data-startDate="${course.fullStartTime}">Когда начинается</span>
+													</div>
+
+													<img src="../img/SweetsAcademy.svg">
+												</div>
+												<div class="content-element__header-side">
+													<div class="info-blocks">
+														<div class="info-blocks__wrapper module-about__info module-info ">
+															<div class="info-block info-block_icon info-block_icon_module module-info__item">
+																<span class="info-block__text" th:utext="${course.modulesCount} + ' модулей'">5
+																	модулей</span>
+															</div>
+															<div class="info-block info-block_icon info-block_icon_video module-info__item">
+																<span class="info-block__text" th:utext="${course.lessonsCount} + ' урок'">3
+																	уроков</span>
+															</div>
+															<div class="info-block info-block_icon info-block_icon_work module-info__item">
+																<span class="info-block__text"
+																	th:utext="${course.homeworkCount} + ' домашнее задание'">7 заданий</span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="content-element__content module-top__progress">
+										<div class="progress-bar">
+											<div class="progress-bar__wrapper">
+												<div class="progress-bar__progress"
+													th:style="'width:' + ${course.completedModulesPercent} + '%;'"
+													th:classappend="${course.completedModulesClass}"></div>
+												<span class="progress-bar__text" th:utext="${course.completedModulesPercent + ' %'}">0%</span>
+												<span class="progress-bar__text"
+													th:utext="${course.completedModulesCount + ' модуля пройдено'}">3 модулей
+													пройдено</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="block-delimiter"></div>
+
+						<th:block th:each="module, stat : ${modules}">
+
+
+							<div class="content-element module">
+								<div class="content-element__wrapper module__column">
+									<div class="content-element__side content-element__side_bordered module__wrapper">
+										<div class="content-element__header module__wrapper-inner">
+											<div class="content-element__header-wrapper module__header module-header">
+
+												<div class="content-element__header-item module-header__item">
+													<div class="content-element__header-main">
+														<div class="content-element__header-element">
+															<span
+																class="content-element__title content-element__title_blue title title-h4 module-header__id"
+																th:utext="${stat.count}">1</span>
+														</div>
+													</div>
+												</div>
+
+												<div class="content-element__header-item module-header__item">
+													<div class="content-element__header-main -gap_2 module-header__item-wrapper">
+														<div class="content-element__header-element module-header__title">
+															<span class="content-element__title title title-h5 " th:utext="${module.name}">Холодный
+																малиновый чизкейк</span>
+														</div>
+													</div>
+
+													<div class="content-element__header-side">
+														<div class="info-blocks">
+															<div class="info-blocks__wrapper module-header__content">
+																<div class="info-block info-block_icon info-block_icon_video module-header__elem">
+																	<span class="info-block__text" th:utext="${module.lessonsCount} + ' урок'">6
+																		уроков</span>
+																</div>
+																<div class="info-block info-block_icon info-block_icon_work module-header__elem">
+																	<span class="info-block__text"
+																		th:utext="${module.homeworkCount} + ' домашнее задание'">Домашнее задание</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+
+											</div>
+
+											<div class="content-element__header-item module-header__btn-container">
+
+												<div class="content-element__header-main content-element__header-buttons module-header__buttons"
+													th:if="${module.allowStart && module.enabled}">
+
+													<div class="content-element__header-btn module-header__btn-inner">
+
+														<div class="module-header__rating">
+															<svg class="module-header__icon">
+																<use xlink:href="../sprite.svg#star-solid"></use>
+															</svg>
+	
+															4.5
+														</div>
+						
+
+														<div class="btn btn_default " th:classappend="'btn_' + ${module.statusCode}">
+
+															<div class="btn__content btn__content_medium module-header__status">
+																<th:block th:if="${module.statusId != 1 && module.statusId != 2}">
+																	<span class="btn__title btn__title_small btn__icon module-header__status-btn"
+																		th:classappend="'btn__icon_' + ${module.statusCode}">
+																		<span class="btn_title-text btn_title-text_small mo-dule-status__status"
+																			th:utext="${module.enabled ? module.statusTitle : 'Недоступен'}">
+
+																			<svg class="module-status__icon">
+																				<use xlink:href='../sprite.svg#check-circle-solid'></use>
+																			</svg>
+
+																			Статус 1
+
+																			<div class="module-header__rating">
+																				<svg class="module-header__icon">
+																					<use xlink:href="../sprite.svg#star-solid"></use>
+																				</svg>
+						
+																				4.5
+																			</div>
+
+																		</span>
+																	</span>
+																</th:block> 
+
+															<!-- <th:block th:unless="${module.statusId != 1 && module.statusId != 2}">
+																	<span class="btn__title btn__title_small">
+																		<span class="btn_title-text btn_title-text_small module-header__status-btn"
+																			th:utext="${module.enabled ? module.statusTitle : 'Недоступен'}">Стаус 2</span>
+																	</span>
+																</th:block> -->
+															</div>
+
+														</div>
+
+													</div>
+
+													<div class="content-element__header-btn module-header__btn  module-header__btn-inner">
+														<th:block th:if="${module.enabled}">
+															<a th:href="'/user/courses/' + ${idDeal} + '/' + ${module.id} + '/'"
+																class="btn btn_outline">
+																<div class="btn__content btn__content_large module-header__btn">
+																	<span class="btn__title btn__title_small">
+																		<span class="btn_title-text btn_title-text_small module-header__status-btn">Перейти
+																			к урокам</span>
+																	</span>
+																</div>
+															</a>
+														</th:block>
+
+														 <!-- <th:block th:unless="${module.enabled}">
+															<button class="btn btn_outline" disabled>
+																<div class="btn__content btn__content_large">
+																	<span class="btn__title btn__title_small">
+																		<span class="btn_title-text btn_title-text_small">Перейти
+																			к урокам</span>
+																	</span>
+																</div>
+															</button>
+														</th:block>  -->
+													</div>
+												</div>
+
+												<div class="module__lessons-closed module-header__warning"
+													th:if="${!(module.allowStart && module.enabled)}">
+													Урок будет доступен при выполнении домашнего задания прошлого
+													модуля!
+												</div>
+											</div>
+
+										</div>
+									</div>
+
+									<input type="checkbox" id="module__checkbox" class="module__checkbox">
+									<label for="module__checkbox" class="module__roll-up roll-up">
+										<span class="roll-up__text">Свернуть</span>
+									</label>
+
+									<div class="content-element__main module__main module-main">
+										<div class="content-element__content">
+											<div class="content-element__content__wrapper module-main__wrapper">
+												<div class="content-element__content-main module-main__inner">
+													<div class="content-element__text content-element__text_short module-main__text-wrapper">
+														<div class="content-element__text-wrapper module-main__text" th:utext="${module.description}">
+															Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit incidunt aut eos est,
+															architecto nobis voluptatum libero ut
+														</div>
+													</div>
+												</div>
+												<div class="content-element__content-side ">
+													<div class="content-element__image module-main__image">
+														<img th:src="'/' + ${module.logoPath}" alt="">
+														<img src="../img/preview.png" alt="">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="content-element module">
+								<div class="content-element__wrapper module__column">
+									<div class="content-element__side content-element__side_bordered module__wrapper">
+										<div class="content-element__header">
+											<div class="content-element__header-wrapper module__header module-header">
+
+												<div class="content-element__header-item module-header__item">
+													<div class="content-element__header-main">
+														<div class="content-element__header-element">
+															<span
+																class="content-element__title content-element__title_blue title title-h4 module-header__id"
+																th:utext="${stat.count}">1</span>
+														</div>
+													</div>
+												</div>
+
+												<div class="content-element__header-item module-header__item">
+													<div class="content-element__header-main -gap_2 module-header__item-wrapper">
+														<div class="content-element__header-element module-header__title">
+															<span class="content-element__title title title-h5 " th:utext="${module.name}">Холодный
+																малиновый чизкейк</span>
+														</div>
+													</div>
+
+													<div class="content-element__header-side">
+														<div class="info-blocks">
+															<div class="info-blocks__wrapper module-header__content">
+																<div class="info-block info-block_icon info-block_icon_video module-header__elem">
+																	<span class="info-block__text" th:utext="${module.lessonsCount} + ' урок'">6
+																		уроков</span>
+																</div>
+																<div class="info-block info-block_icon info-block_icon_work module-header__elem">
+																	<span class="info-block__text"
+																		th:utext="${module.homeworkCount} + ' домашнее задание'">Домашнее задание</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+
+											</div>
+
+											<div class="content-element__header-item module-header__btn-container">
+
+												<div class="content-element__header-main content-element__header-buttons module-header__buttons"
+													th:if="${module.allowStart && module.enabled}">
+
+													<div class="content-element__header-btn module-header__btn-inner">
+														<div class="btn btn_default " th:classappend="'btn_' + ${module.statusCode}">
+
+															<div class="btn__content btn__content_medium module-header__status">
+																<th:block th:if="${module.statusId != 1 && module.statusId != 2}">
+																	<span class="btn__title btn__title_small btn__icon module-header__status-btn"
+																		th:classappend="'btn__icon_' + ${module.statusCode}">
+																		<span class="btn_title-text btn_title-text_small"
+																			th:utext="${module.enabled ? module.statusTitle : 'Недоступен'}">
+																		
+																			<svg class="module-status__icon">
+																				<use xlink:href='../sprite.svg#check-circle-solid'></use>
+																			</svg>
+
+
+
+																		</span>
+																	</span>
+																</th:block> 
+
+															<!-- <th:block th:unless="${module.statusId != 1 && module.statusId != 2}">
+																	<span class="btn__title btn__title_small">
+																		<span class="btn_title-text btn_title-text_small module-header__status-btn"
+																			th:utext="${module.enabled ? module.statusTitle : 'Недоступен'}">Стаус 2</span>
+																	</span>
+																</th:block> -->
+															</div>
+
+														</div>
+
+													</div>
+
+													<div class="content-element__header-btn module-header__btn  module-header__btn-inner">
+														<th:block th:if="${module.enabled}">
+															<a th:href="'/user/courses/' + ${idDeal} + '/' + ${module.id} + '/'"
+																class="btn btn_outline">
+																<div class="btn__content btn__content_large module-header__btn">
+																	<span class="btn__title btn__title_small">
+																		<span class="btn_title-text btn_title-text_small module-header__status-btn">Перейти
+																			к урокам</span>
+																	</span>
+																</div>
+															</a>
+														</th:block>
+
+														 <!-- <th:block th:unless="${module.enabled}">
+															<button class="btn btn_outline" disabled>
+																<div class="btn__content btn__content_large">
+																	<span class="btn__title btn__title_small">
+																		<span class="btn_title-text btn_title-text_small">Перейти
+																			к урокам</span>
+																	</span>
+																</div>
+															</button>
+														</th:block>  -->
+													</div>
+												</div>
+
+												<div class="module__lessons-closed module-header__warning"
+													th:if="${!(module.allowStart && module.enabled)}">
+													Урок будет доступен при выполнении домашнего задания прошлого
+													модуля!
+												</div>
+											</div>
+
+										</div>
+									</div>
+
+									<input type="checkbox" id="module__checkbox2" class="module__checkbox">
+									<label for="module__checkbox2" class="module__roll-up roll-up">
+										<span class="roll-up__text">Свернуть</span>
+									</label>
+
+									<div class="content-element__main module__main module-main">
+										<div class="content-element__content">
+											<div class="content-element__content__wrapper module-main__wrapper">
+												<div class="content-element__content-main module-main__inner">
+													<div class="content-element__text content-element__text_short module-main__text-wrapper">
+														<div class="content-element__text-wrapper module-main__text" th:utext="${module.description}">
+															Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit incidunt aut eos est,
+															architecto nobis voluptatum libero ut
+														</div>
+													</div>
+												</div>
+												<div class="content-element__content-side module-main__wrapper">
+													<div class="content-element__image module-main__image">
+														<img th:src="'/' + ${module.logoPath}" alt="">
+														<img src="../img/preview.png" alt="">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</th:block>
+					
+
+						<!--                        <div class="content-element">-->
+						<!--                            <div class="content-element__wrapper">-->
+						<!--                                <div class="content-element__side content-element__side_bordered">-->
+						<!--                                    <div class="content-element__header">-->
+						<!--                                        <div class="content-element__header-wrapper">-->
+						<!--                                            <div class="content-element__header-item">-->
+						<!--                                                <div class="content-element__header-main -gap_2">-->
+						<!--                                                    <div class="content-element__header-element">-->
+						<!--                                                        <span class="content-element__title title title-h5">Холодный малиновый чизкейк</span>-->
+						<!--                                                    </div>-->
+						<!--                                                </div>-->
+						<!--                                                <div class="content-element__header-side">-->
+						<!--                                                    <div class="info-blocks">-->
+						<!--                                                        <div class="info-blocks__wrapper">-->
+						<!--                                                            <div class="info-block info-block_icon info-block_icon_video">-->
+						<!--                                                                <span class="info-block__text">6 модулей</span>-->
+						<!--                                                            </div>-->
+						<!--                                                            <div class="info-block info-block_icon info-block_icon_work">-->
+						<!--                                                                <span class="info-block__text">7 домашних заданий</span>-->
+						<!--                                                            </div>-->
+						<!--                                                        </div>-->
+						<!--                                                    </div>-->
+						<!--                                                </div>-->
+						<!--                                            </div>-->
+						<!--                                            <div class="content-element__header-item">-->
+						<!--                                                <div class="content-element__header-main">-->
+						<!--                                                    <div class="content-element__header-btn">-->
+						<!--                                                        <a href="#" class="btn btn_violet">-->
+						<!--                                                            <div class="btn__content btn__content_medium">-->
+						<!--                                                                <span class="btn__title btn__title_small btn__icon btn__icon_play">-->
+						<!--                                                                    <span class="btn_title-text btn_title-text_small">Прохожу</span>-->
+						<!--                                                                </span>-->
+						<!--                                                            </div>-->
+						<!--                                                        </a>-->
+						<!--                                                    </div>-->
+						<!--                                                    <div class="content-element__header-btn">-->
+						<!--                                                        <a href="#" class="btn btn_outline">-->
+						<!--                                                            <div class="btn__content btn__content_large">-->
+						<!--                                                                <span class="btn__title btn__title_small">-->
+						<!--                                                                    <span class="btn_title-text btn_title-text_small">Перейти к урокам</span>-->
+						<!--                                                                </span>-->
+						<!--                                                            </div>-->
+						<!--                                                        </a>-->
+						<!--                                                    </div>-->
+						<!--                                                </div>-->
+						<!--                                            </div>-->
+						<!--                                        </div>-->
+						<!--                                    </div>-->
+						<!--                                </div>-->
+						<!--                                <div class="content-element__main">-->
+						<!--                                    <div class="content-element__content">-->
+						<!--                                        <div class="content-element__content__wrapper">-->
+						<!--                                            <div class="content-element__content-main">-->
+						<!--                                                <div class="content-element__text content-element__text_short">-->
+						<!--                                                    <div class="content-element__text-wrapper">-->
+						<!--                                                        Далеко-далеко за словесными горами в стране гласных и согласных-->
+						<!--                                                        живут рыбные тексты. Вдали от всех живут они в буквенных домах на-->
+						<!--                                                        берегу Семантика большого языкового океана. <br> Маленький ручеек Даль-->
+						<!--                                                        журчит по всей стране и обеспечивает ее всеми необходимыми правилами.-->
+						<!--                                                        Эта парадигматическая страна, в которой жаренные члены предложения-->
+						<!--                                                        залетают прямо в рот.-->
+						<!--                                                    </div>-->
+						<!--                                                </div>-->
+						<!--                                            </div>-->
+						<!--                                            <div class="content-element__content-side">-->
+						<!--                                                <div class="content-element__image">-->
+						<!--                                                    <img src="/img/test-preview.png" alt="">-->
+						<!--                                                </div>-->
+						<!--                                            </div>-->
+						<!--                                        </div>-->
+						<!--                                    </div>-->
+						<!--                                </div>-->
+						<!--                            </div>-->
+						<!--                        </div>-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+</body>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+
+<script src="../js/progress-bar.js"> </script>
+<script src="../js/countdown.js"> </script>
+
+</html>

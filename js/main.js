@@ -11,7 +11,7 @@
 //     $('.datepicker.active').find('[data-action="today"]').trigger('click');
 // });
 
-$(document).ready(function () {
+$(document).ready(function(){
     var $mobileMenu = $('[js-mobile-menu]');
     var $openMobileMenu = $('[js-open-mobile-menu]');
     var $closeMobileMenu = $('[js-close-mobile-menu]');
@@ -22,8 +22,8 @@ $(document).ready(function () {
     });
 
     $closeMobileMenu.click(function () {
-        $mobileMenu.hide();
-        document.body.style.overflow = 'auto';
+       $mobileMenu.hide();
+       document.body.style.overflow = 'auto';
     });
 
     const $filterForm = $('[filter-form]')
@@ -33,11 +33,11 @@ $(document).ready(function () {
 
     const $paramDateType = $('[filter-param-date-type]');
     const $paramYear = $('[filter-param-year]');
-    $paramDateType.on('change', function () {
+    $paramDateType.on('change', function() {
         clearFilterDate();
     })
 
-    $paramYear.on('change', function () {
+    $paramYear.on('change', function() {
         clearFilterDate();
     })
 
@@ -89,7 +89,7 @@ $(document).ready(function () {
     //     });
     // });
 
-    $('[js-copy-link]').on('click', function () {
+    $('[js-copy-link]').on('click', function() {
         var $tmp = $("<textarea>");
         $("body").append($tmp);
         $tmp.val($(this).attr('data-link')).select();
@@ -121,10 +121,11 @@ $(document).ready(function () {
     });
 });
 
-$.fn.serializeObject = function () {
+$.fn.serializeObject = function()
+{
     var o = {};
     var a = this.serializeArray();
-    $.each(a, function () {
+    $.each(a, function() {
         if (o[this.name]) {
             if (!o[this.name].push) {
                 o[this.name] = [o[this.name]];
@@ -137,8 +138,8 @@ $.fn.serializeObject = function () {
     return o;
 };
 
-$.fn.removeClassWild = function (mask) {
-    return this.removeClass(function (index, cls) {
+$.fn.removeClassWild = function(mask) {
+    return this.removeClass(function(index, cls) {
         var re = mask.replace(/\*/g, '\\S+');
         return (cls.match(new RegExp('\\b' + re + '', 'g')) || []).join(' ');
     });
@@ -168,7 +169,7 @@ function validateForm(form) {
     $(form).validate({
         onkeyup: false,
         onfocusout: false,
-        errorPlacement: function (label, element) {
+        errorPlacement: function(label, element) {
             label.addClass('error-wrapper');
             label.insertAfter(element);
         },
@@ -185,14 +186,14 @@ function validateForm(form) {
 
 
 function removeAcceptBtnAttribute(btn) {
-    btn.each(function () {
-        var attributes = $.map(this.attributes, function (item) {
+    btn.each(function() {
+        var attributes = $.map(this.attributes, function(item) {
             return item.name;
         });
 
         var img = $(this);
-        $.each(attributes, function (i, item) {
-            if (item !== 'accept-dialog' && item !== 'class') {
+        $.each(attributes, function(i, item) {
+            if (item !== 'accept-dialog' && item !== 'class')  {
                 img.removeAttr(item);
             }
         });
@@ -208,7 +209,7 @@ function validateCheckboxForm(form) {
     $(form).validate({
         onkeyup: false,
         onfocusout: false,
-        errorPlacement: function (label, element) {
+        errorPlacement: function(label, element) {
             label.addClass('error-wrapper');
             label.insertAfter(element.siblings('label').last());
         },
@@ -223,4 +224,3 @@ function validateCheckboxForm(form) {
     return $(form).valid();
 }
 
-document.querySelectorAll('a').forEach((item) => { item.addEventListener('click', (e) => { e.preventDefault() }) })

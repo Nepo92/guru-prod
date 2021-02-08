@@ -25,15 +25,11 @@
   <link href="../css/btn.css" rel="stylesheet">
   <link href="../css/main-nav.css" rel="stylesheet">
 
-  <link href="../css/blocks/u_courses.css" rel="stylesheet">
-  <link href="../css/blocks/menu.css" rel="stylesheet">
-  <link href="../css/blocks/tabs.css" rel="stylesheet">
+  <link href="../css/pages/u_courses.css" rel="stylesheet">
 
 </head>
-<!--Аттрибут тега body-->
-<!-- onload="getCountdownOnUserCoursesPage() -->
 
-<body class="body">
+<body class="body" onload="getCountdownOnUserCoursesPage()">
   <div th:replace="base :: user-nav"></div>
   <div th:replace="base :: user-mobile-nav"></div>
 
@@ -130,9 +126,9 @@
 
           <div class=" open-mobile-menu__exit nav__item">
             <a href="/logout" class="main-nav__item-wrapper">
-              <div class="main-nav__item main-nav__item_exit nav__icon"">
-              </div>
-              <div class=" main-nav__item-title">Выйти из аккаунта</div>
+              <div class="main-nav__item main-nav__item_exit nav__icon">
+            </div>
+            <div class=" main-nav__item-title">Выйти из аккаунта</div>
             </a>
           </div>
         </div>
@@ -161,7 +157,7 @@
                 </div>
               </div>
             </div>
-            <div class="main-nav__avatar-desc">
+            <div class="main-nav__avatar-desc nav__user">
               <div class="main-nav__avatar-name nav__name">Агнаева Екатерина Викторовна</div>
             </div>
           </div>
@@ -187,8 +183,6 @@
       </div>
     </div>
   </div>
-
-  <!-- Container -->
 
   <div class="body__wrapper">
     <div class="body__header">
@@ -222,7 +216,6 @@
 
         <div class="available-courses__wrapper block-wrapper">
 
-
           <div class="available-courses__main">
             <div class="-gap_3">
               <div class="tabs tabs_underline">
@@ -241,147 +234,147 @@
               </div>
             </div>
 
+
+
             <div class="tabs-animated">
 
               <div js-tabby-panel class="tabs-panel  is-open" data-tabby="c:0">
                 <div class="tabs-panel-transform">
                   <div class="available-courses__list">
 
-                  <a href="156388/" class="course__item">
+                    <a href="156388/" class="course__item">
 
-                    <div class="available-course__wrapper courses" style="background-color:#ff7d52;">
-                      <div class="available-course__main course__about">
-                        <div class="available-course__start -gap_4 courses__date">
-                          <div class="info-blocks">
+                      <div class="available-course__wrapper courses" style="background-color:#ff7d52;">
+                        <div class="available-course__main course__about">
+                          <div class="available-course__start -gap_4 courses__date">
+                            <div class="info-blocks">
 
-                            <div class="info-blocks__wrapper date">
-                              <div class="info-block info-block_icon info-block_icon_play date__item">
-                                <span class="info-block__text info-block__text_big">25.11.20</span>
+                              <div class="info-blocks__wrapper date">
+                                <div class="info-block info-block_icon info-block_icon_play date__item">
+                                  <span class="info-block__text info-block__text_big">25.11.20</span>
+                                </div>
+
+                                <div class="info-block date__item">
+                                  <span class="info-block__text info-block__text_big">19:00</span>
+                                </div>
                               </div>
+                            </div>
 
-                              <div class="info-block date__item">
-                                <span class="info-block__text info-block__text_big">19:00</span>
+                            <img src="../img/SweetsAcademy.svg" alt="sweetsAcademy">
+                          </div>
+
+                          <div class="available-course__title -gap_2 courses__title">Пряники Домашние</div>
+                          <div class="available-course__type -gap_3 courses__type type">
+                            <div class="outline-text">
+                              <div class="outline-text__content outline-text__content_dark">
+
+                                <div class="outline-text__text type__text">Онлайн-курс</div>
                               </div>
                             </div>
                           </div>
+                          <div class="available-course__desc courses__desc">
+                            Какой-то подзаголовок
+                          </div>
 
-                          <img src="../img/SweetsAcademy.svg" alt="sweetsAcademy">
-                        </div>
-
-                        <div class="available-course__title -gap_2 courses__title">Пряники Домашние</div>
-                        <div class="available-course__type -gap_3 courses__type type">
-                          <div class="outline-text">
-                            <div class="outline-text__content outline-text__content_dark">
-
-                              <div class="outline-text__text type__text">Онлайн-курс</div>
+                          <div class="available-course__progress -gap_4 courses__progress">
+                            <div class="progress-bar">
+                              <div class="progress-bar__wrapper">
+                                <div class="progress-bar__progress progress_red" style="width:0%;"></div>
+                                <span class="progress-bar__text">0 %</span>
+                                <span class="progress-bar__text">0 модуля пройдено</span>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                        <div class="available-course__desc courses__desc">
-                          Какой-то подзаголовок
-                        </div>
-
-                        <div class="available-course__progress -gap_4 courses__progress">
-                          <div class="progress-bar">
-                            <div class="progress-bar__wrapper">
-                              <div class="progress-bar__progress progress_red" style="width:0%;"></div>
-                              <span class="progress-bar__text">0 %</span>
-                              <span class="progress-bar__text">0 модуля пройдено</span>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="available-course__info">
-                          <div class="info-blocks">
-                            <div class="info-blocks__wrapper courses__content info">
-                              <div class="info-block info-block_icon info-block_icon_module info__item">
-                                <span class="info-block__text">2 модулей</span>
-                              </div>
-                              <div class="info-block info-block_icon info-block_icon_video info__item">
-                                <span class="info-block__text">2 урок</span>
-                              </div>
-                              <div class="info-block info-block_icon info-block_icon_work info__item">
-                                <span class="info-block__text">2 заданий</span>
+                          <div class="available-course__info">
+                            <div class="info-blocks">
+                              <div class="info-blocks__wrapper courses__content info">
+                                <div class="info-block info-block_icon info-block_icon_module info__item">
+                                  <span class="info-block__text">2 модулей</span>
+                                </div>
+                                <div class="info-block info-block_icon info-block_icon_video info__item">
+                                  <span class="info-block__text">2 урок</span>
+                                </div>
+                                <div class="info-block info-block_icon info-block_icon_work info__item">
+                                  <span class="info-block__text">2 заданий</span>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-
-                      <div class="available-course__side">
-                        <div class="available-course__image courses__image">
-                          <img src="../img/bg.png" alt="bg">
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-
-                  <a href="156388/" class="course__item">
-
-                    <div class="available-course__wrapper courses" style="background-color:#ff7d52;">
-                      <div class="available-course__main course__about">
-                        <div class="available-course__start -gap_4 courses__date">
-                          <div class="info-blocks">
-
-                            <div class="info-blocks__wrapper date">
-                              <div class="info-block info-block_icon info-block_icon_play date__item">
-                                <span class="info-block__text info-block__text_big">25.11.20</span>
-                              </div>
-
-                              <div class="info-block date__item">
-                                <span class="info-block__text info-block__text_big">19:00</span>
-                              </div>
-                            </div>
-                          </div>
-
-                          <img src="../img/SweetsAcademy.svg" alt="sweetsAcademy">
-                        </div>
-
-                        <div class="available-course__title -gap_2 courses__title">Пряники Домашние</div>
-                        <div class="available-course__type -gap_3 courses__type type">
-                          <div class="outline-text">
-                            <div class="outline-text__content outline-text__content_dark">
-
-                              <div class="outline-text__text type__text">Онлайн-курс</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="available-course__desc courses__desc">
-                          Какой-то подзаголовок
-                        </div>
-
-                        <div class="available-course__progress -gap_4 courses__progress">
-                          <div class="progress-bar">
-                            <div class="progress-bar__wrapper">
-                              <div class="progress-bar__progress progress_red" style="width:0%;"></div>
-                              <span class="progress-bar__text">0 %</span>
-                              <span class="progress-bar__text">0 модуля пройдено</span>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="available-course__info">
-                          <div class="info-blocks">
-                            <div class="info-blocks__wrapper courses__content info">
-                              <div class="info-block info-block_icon info-block_icon_module info__item">
-                                <span class="info-block__text">2 модулей</span>
-                              </div>
-                              <div class="info-block info-block_icon info-block_icon_video info__item">
-                                <span class="info-block__text">2 урок</span>
-                              </div>
-                              <div class="info-block info-block_icon info-block_icon_work info__item">
-                                <span class="info-block__text">2 заданий</span>
-                              </div>
-                            </div>
+                        <div class="available-course__side">
+                          <div class="available-course__image courses__image">
+                            <img src="../img/bg.png" alt="bg">
                           </div>
                         </div>
                       </div>
+                    </a>
+                    <a href="156388/" class="course__item">
 
-                      <div class="available-course__side">
-                        <div class="available-course__image courses__image">
-                          <img src="../img/bg.png" alt="bg">
+                      <div class="available-course__wrapper courses" style="background-color:#ff7d52;">
+                        <div class="available-course__main course__about">
+                          <div class="available-course__start -gap_4 courses__date">
+                            <div class="info-blocks">
+
+                              <div class="info-blocks__wrapper date">
+                                <div class="info-block info-block_icon info-block_icon_play date__item">
+                                  <span class="info-block__text info-block__text_big">25.11.20</span>
+                                </div>
+
+                                <div class="info-block date__item">
+                                  <span class="info-block__text info-block__text_big">19:00</span>
+                                </div>
+                              </div>
+                            </div>
+
+                            <img src="../img/SweetsAcademy.svg" alt="sweetsAcademy">
+                          </div>
+
+                          <div class="available-course__title -gap_2 courses__title">Пряники Домашние</div>
+                          <div class="available-course__type -gap_3 courses__type type">
+                            <div class="outline-text">
+                              <div class="outline-text__content outline-text__content_dark">
+
+                                <div class="outline-text__text type__text">Онлайн-курс</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="available-course__desc courses__desc">
+                            Какой-то подзаголовок
+                          </div>
+
+                          <div class="available-course__progress -gap_4 courses__progress">
+                            <div class="progress-bar">
+                              <div class="progress-bar__wrapper">
+                                <div class="progress-bar__progress progress_red" style="width:0%;"></div>
+                                <span class="progress-bar__text">0 %</span>
+                                <span class="progress-bar__text">0 модуля пройдено</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="available-course__info">
+                            <div class="info-blocks">
+                              <div class="info-blocks__wrapper courses__content info">
+                                <div class="info-block info-block_icon info-block_icon_module info__item">
+                                  <span class="info-block__text">2 модулей</span>
+                                </div>
+                                <div class="info-block info-block_icon info-block_icon_video info__item">
+                                  <span class="info-block__text">2 урок</span>
+                                </div>
+                                <div class="info-block info-block_icon info-block_icon_work info__item">
+                                  <span class="info-block__text">2 заданий</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="available-course__side">
+                          <div class="available-course__image courses__image">
+                            <img src="../img/bg.png" alt="bg">
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </a>
+                    </a>
 
                   </div>
                 </div>

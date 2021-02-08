@@ -24,11 +24,8 @@
     <link href="../css/progress-bar.css" rel="stylesheet">
     <link href="../css/btn.css" rel="stylesheet">
     <link href="../css/main-nav.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="../css/blocks/menu.css">
-    <link rel="stylesheet" href="../css/blocks/raiting.css">
-    <link rel="stylesheet" href="../css/blocks/u_module.css">
-
+    
+    <link rel="stylesheet" href="../css/pages/u_module.css">
 </head>
 
 <body class="body">
@@ -129,7 +126,7 @@
 
                     <div class=" open-mobile-menu__exit nav__item">
                         <a href="/logout" class="main-nav__item-wrapper">
-                            <div class="main-nav__item main-nav__item_exit nav__icon"">
+                            <div class="main-nav__item main-nav__item_exit nav__icon">
                 </div>
                 <div class=" main-nav__item-title">Выйти из аккаунта</div>
                         </a>
@@ -160,9 +157,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="main-nav__avatar-desc">
+                        <div class="main-nav__avatar-desc nav__user">
                             <div class="main-nav__avatar-name nav__name">Агнаева Екатерина Викторовна</div>
-                        </div>
+                          </div>
                     </div>
                 </div>
             </div>
@@ -185,6 +182,10 @@
             </div>
         </div>
     </div>
+
+
+
+
     <div class="body__wrapper">
         <div class="body__header">
             <header class="header">
@@ -262,8 +263,8 @@
                                                                         ч 30 мин</span>
                                                                 </div>
                                                                 <div
-                                                                    class="info-block info-block_icon info-block_icon_doc lessons-column__block">
-                                                                    <span class="info-block__text"
+                                                                    class="info-block info-block_icon info-block_icon_doc lessons-column__block lb">
+                                                                    <span class="info-block__text lb__text"
                                                                         th:utext="${lesson.documentsCounter} + ' документов'">3
                                                                         файла</span>
                                                                 </div>
@@ -278,7 +279,7 @@
                                                             <th:block
                                                                 th:if="${allowHomeworkStart or lesson.type != 'homework'}">
                                                                 <a th:href="'/user/courses/' + ${idDeal} + '/' + ${lesson.idModule} + '/' + ${lesson.id} + '/'"
-                                                                    class="btn btn_outline">
+                                                                    class="btn btn_outline lessons-column__button-outline">
                                                                     <div
                                                                         class="btn__content btn__content_large lessons-column__btn ls-btn">
                                                                         <span class="btn__title btn__title_small">
