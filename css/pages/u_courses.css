@@ -4,21 +4,11 @@
   margin: 0;
   padding: 0;
   outline: none;
-  vertical-align: baseline;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 body {
-  font-family: TTCommons;
-  background-color: #f4f4f6;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
   cursor: default;
 }
 
@@ -153,8 +143,8 @@ a {
 
 .user-settings {
   border: 1px solid;
-  -webkit-mask: url(../img/settings.svg) no-repeat center;
-  mask: url(../img/settings.svg) no-repeat center;
+  -webkit-mask: url(../../img/settings.svg) no-repeat center;
+  mask: url(../../img/settings.svg) no-repeat center;
   -webkit-mask-size: 24px 24px;
   mask-size: 24px 24px;
 }

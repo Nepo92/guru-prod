@@ -124,8 +124,8 @@
 
 .user-settings {
   border: 1px solid;
-  -webkit-mask: url(../img/settings.svg) no-repeat center;
-  mask: url(../img/settings.svg) no-repeat center;
+  -webkit-mask: url(../../img/settings.svg) no-repeat center;
+  mask: url(../../img/settings.svg) no-repeat center;
   -webkit-mask-size: 24px 24px;
   mask-size: 24px 24px;
 }
