@@ -298,11 +298,11 @@
 									<div class="module-vk__title">
 										<p>Групповой чат
 
-										<div class="module-vk__icon">
-											<svg>
-												<use xlink:href='../sprite.svg#vk'></use>
-											</svg>
-										</div>
+											<span class="module-vk__icon">
+												<svg>
+													<use xlink:href='../sprite.svg#vk'></use>
+												</svg>
+											</span>
 
 										</p>
 									</div>
@@ -399,6 +399,7 @@
 
 
 																<th:block th:if="${module.statusId != 1 && module.statusId != 2}">
+
 																	<span class="btn__title btn__title_small btn__icon module-header__status-info"
 																		th:classappend="'btn__icon_' + ${module.statusCode}">
 
@@ -467,12 +468,12 @@
 																		</span>
 
 
-																		<div class="unreachable">
-																			<div class="module-status">
+																		<span class="unreachable">
+																			<span class="module-status">
 																				<svg class="">
 																					<use xlink:href='../sprite.svg#check-circle-solid'></use>
 																				</svg>
-																			</div>
+																			</span>
 
 																			<span>
 																				<svg class="module-header__icon">
@@ -487,7 +488,7 @@
 																				На проверке
 
 																			</span>
-																		</div>
+																		</span>
 
 																	</span>
 
@@ -577,7 +578,6 @@
 
 						</th:block>
 
-
 						<!--                        <div class="content-element">-->
 						<!--                            <div class="content-element__wrapper">-->
 						<!--                                <div class="content-element__side content-element__side_bordered">-->
@@ -663,7 +663,7 @@
 								<div class="available-course__wrapper courses" style="background-color:#ff7d52;">
 									<div class="available-course__main course__about">
 										<div class="available-course__start -gap_4 courses__date">
-						
+
 
 											<img src="../img/SweetsAcademy.svg" alt="sweetsAcademy">
 										</div>
@@ -681,7 +681,7 @@
 											Какой-то подзаголовок
 										</div>
 
-			
+
 										<div class="available-course__info">
 											<div class="info-blocks">
 												<div class="info-blocks__wrapper courses__content info">
@@ -700,20 +700,20 @@
 									</div>
 									<div class="available-course__side">
 										<div class="available-course__image courses__image">
-											<img src="../img/bg.png" alt="bg">
-											<a class="courses__open" href="">Открыть
-												<svg>
-													<use xlink:href='../sprite.svg#arrow-right'></use>
-												</svg>
-											</a>
+											<img src="../img/bg.png" alt="bg" />
+											<span class="courses__open">
+												Открыть <span></span>
+											</span>
 										</div>
 									</div>
 								</div>
 							</a>
 
-				
+
 
 						</div>
+
+						<div class="block-delimiter"></div>
 
 						<div class="sertifikat">
 							<div class="sertifikat__inner">
@@ -726,7 +726,7 @@
 										<svg>
 											<use xlink:href='../sprite.svg#download'></use>
 										</svg>
-										Скачать
+										Скачать сертификат
 									</a>
 
 								</div>
@@ -933,7 +933,7 @@
 
 						<div class="estimation">
 							<div class="estimation__inner">
-								<p>Пожалуйста, оцените онлайн-курс</p>
+								<p class="estimation__title">Пожалуйста, оцените онлайн-курс</p>
 
 								<ul class="estimation__list">
 									<li class="estimation__item">
@@ -1003,7 +1003,7 @@
 
 						<div class="estimation">
 							<div class="estimation__inner">
-								<p>Пожалуйста, оцените онлайн-курс</p>
+								<p class="estimation__title">Пожалуйста, оцените онлайн-курс</p>
 
 								<ul class="estimation__list">
 									<li class="estimation__item">
@@ -1092,7 +1092,7 @@
 								<div class="sertifikat__content">
 
 									<div class="sertifikat__image sertifikat-image">
-											<img src="../img/bg.png" alt="sertifikat">
+										<img src="../img/bg.png" alt="sertifikat">
 									</div>
 								</div>
 
@@ -1103,11 +1103,14 @@
 			</div>
 		</div>
 	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="../js/progress-bar.js"> </script>
+	<script src="../js/countdown.js"> </script>
 </body>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
 
-<script src="../js/progress-bar.js"> </script>
-<script src="../js/countdown.js"> </script>
+
+
 
 </html>
