@@ -1,33 +1,3 @@
-*,
-::before,
-::after {
-  margin: 0;
-  padding: 0;
-  outline: none;
-  vertical-align: baseline;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: TTCommons;
-  background-color: #f4f4f6;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  cursor: default;
-}
-
-a {
-  text-decoration: none;
-  background-color: transparent;
-  color: inherit;
-}
-
 .body__header {
   height: 0px !important;
 }
@@ -77,6 +47,12 @@ a {
     line-height: 18px;
     letter-spacing: 0em;
     text-align: left;
+  }
+}
+
+@media (min-width: 541px) {
+  .progress-bar {
+    margin-top: 25px;
   }
 }
 

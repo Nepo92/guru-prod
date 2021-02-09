@@ -25,37 +25,6 @@ body {
 
 a {
   text-decoration: none;
-  background-color: transparent;
-  color: inherit;
-}
-
-*,
-::before,
-::after {
-  margin: 0;
-  padding: 0;
-  outline: none;
-  vertical-align: baseline;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: TTCommons;
-  background-color: #f4f4f6;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  cursor: default;
-}
-
-a {
-  text-decoration: none;
-  background-color: transparent;
   color: inherit;
 }
 
@@ -111,6 +80,12 @@ a {
   }
 }
 
+@media (min-width: 541px) {
+  .progress-bar {
+    margin-top: 25px;
+  }
+}
+
 @media (min-width: 768px) {
   /* Header */
   .header-btn {
@@ -163,36 +138,6 @@ a {
     display: none;
   }
   /* Header */
-}
-
-*,
-::before,
-::after {
-  margin: 0;
-  padding: 0;
-  outline: none;
-  vertical-align: baseline;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: TTCommons;
-  background-color: #f4f4f6;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  cursor: default;
-}
-
-a {
-  text-decoration: none;
-  background-color: transparent;
-  color: inherit;
 }
 
 /* menu */
@@ -321,8 +266,8 @@ a {
 
 .user-settings {
   border: 1px solid;
-  -webkit-mask: url(../../../img/settings.svg) no-repeat center;
-  mask: url(../../../img/settings.svg) no-repeat center;
+  -webkit-mask: url(../img/settings.svg) no-repeat center;
+  mask: url(../img/settings.svg) no-repeat center;
   -webkit-mask-size: 24px 24px;
   mask-size: 24px 24px;
 }
@@ -350,36 +295,6 @@ a {
     margin-top: 0px !important;
     margin-bottom: 25px !important;
   }
-}
-
-*,
-::before,
-::after {
-  margin: 0;
-  padding: 0;
-  outline: none;
-  vertical-align: baseline;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: TTCommons;
-  background-color: #f4f4f6;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  cursor: default;
-}
-
-a {
-  text-decoration: none;
-  background-color: transparent;
-  color: inherit;
 }
 
 /* Оценка */
