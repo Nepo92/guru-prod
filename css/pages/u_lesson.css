@@ -727,12 +727,6 @@ a {
   height: auto;
 }
 
-.gallery-item {
-  -webkit-transform: translateX(10px);
-  -ms-transform: translateX(10px);
-  transform: translateX(10px);
-}
-
 .fancybox-content {
   padding: 0 !important;
   display: inline-block;
@@ -779,6 +773,10 @@ a {
 .comment__files {
   width: auto;
   margin: 0;
+}
+
+.comment__files:last-child {
+  margin-left: 10px;
 }
 
 .comment__files::after {
