@@ -718,11 +718,29 @@ a {
   }
 }
 
+.gallery-item .gallery-item_small img {
+  width: 100%;
+  height: auto;
+}
+
 .fancybox-content {
   padding: 0 !important;
+  display: inline-block;
   border-radius: 15px;
   width: auto;
   height: auto;
+  margin: 0;
+  overflow: visible;
+}
+
+.fancybox-content a {
+  width: 100%;
+  height: auto;
+}
+
+.fancybox-content a img {
+  width: 100%;
+  margin: 0;
 }
 
 .fancybox-slide--html {
@@ -746,6 +764,15 @@ a {
   width: 30px;
   height: 30px;
   color: gray;
+}
+
+.comment__files::after {
+  width: auto;
+}
+
+.gallery__item {
+  margin: 0;
+  width: auto;
 }
 
 .header__box {
