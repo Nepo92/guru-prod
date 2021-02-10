@@ -784,19 +784,31 @@ a {
   .available-courses__list {
     width: 1181px;
   }
-  .courses__about {
+  .available-course__main {
     min-width: 460px;
+  }
+  .courses__about {
+    min-width: 400px;
   }
   .courses__title {
     -webkit-transform: translateY(11px);
     -ms-transform: translateY(11px);
     transform: translateY(11px);
   }
+  .courses__desc {
+    margin-top: 20px;
+  }
   .courses__type {
     margin-top: 14px;
   }
   .courses__progress {
-    margin-top: 31px;
+    margin-top: 53px;
+  }
+  .courses__info {
+    margin-top: 27px;
+  }
+  .course__about {
+    width: 465px;
   }
   .type__text {
     padding: 3px 9px;
@@ -804,10 +816,19 @@ a {
     border-radius: 5px;
   }
   .info {
-    margin-top: 7px;
+    margin-top: 0px;
     -webkit-transform: translateX(7px);
     -ms-transform: translateX(7px);
     transform: translateX(7px);
+    margin-bottom: 0;
+  }
+  .info-block__text {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
   }
 }
 
