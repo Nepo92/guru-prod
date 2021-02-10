@@ -723,6 +723,13 @@ a {
   height: auto;
 }
 
+.gallery-item {
+  margin-left: 0px;
+  -webkit-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+}
+
 .fancybox-content {
   padding: 0 !important;
   display: inline-block;
@@ -766,6 +773,11 @@ a {
   color: gray;
 }
 
+.comment__files {
+  width: auto;
+  margin: 0;
+}
+
 .comment__files::after {
   width: auto;
 }
@@ -773,6 +785,16 @@ a {
 .gallery__item {
   margin: 0;
   width: auto;
+}
+
+.gallery__item:nth-child(2) {
+  margin-right: 0;
+  border: 10px solid;
+}
+
+.gallery-item__preview {
+  width: auto;
+  height: auto;
 }
 
 .header__box {
