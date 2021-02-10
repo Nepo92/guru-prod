@@ -498,11 +498,6 @@ a {
   width: 100%;
 }
 
-.header__box {
-  padding-left: 20px;
-  padding-bottom: 0;
-}
-
 .available-courses {
   height: auto !important;
 }
@@ -619,14 +614,6 @@ a {
   text-align: left;
 }
 
-.progress-bar__text {
-  font-size: 14px;
-}
-
-.succes ~ .progress-bar-wrapper {
-  background-color: #27AE60 !important;
-}
-
 @media (min-width: 375px) {
   .courses__date {
     margin-bottom: 0;
@@ -737,16 +724,17 @@ a {
     top: 23px;
     right: 30px;
   }
-  .progress-bar__text {
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 23px;
-    letter-spacing: 0em;
-    text-align: left;
-  }
-  .module-top__progress {
-    margin-top: 10px;
+}
+
+@media (min-width: 692px) {
+  .body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -776,26 +764,12 @@ a {
 }
 
 @media (min-width: 1001px) {
-  .mobile_nav {
-    display: none !important;
-  }
   .body__wrapper {
     width: calc(100% - 70px);
     margin-left: 70px;
   }
   .body__content {
     margin-left: 40px;
-  }
-  .header__box {
-    padding: 20px 0 0 60px;
-    height: 100px;
-    background-color: white;
-  }
-  .header__box h3 {
-    font-size: 37px;
-    -webkit-transform: translate(0px, 15px);
-    -ms-transform: translate(0px, 15px);
-    transform: translate(0px, 15px);
   }
   .courses__about {
     max-width: 400px;
@@ -835,6 +809,72 @@ a {
     -ms-transform: translateX(7px);
     transform: translateX(7px);
   }
+}
+
+.body__wrapper {
+  width: 100%;
+}
+
+.header__box {
+  padding-left: 20px;
+  padding-bottom: 0;
+}
+
+.progress-bar__text {
+  font-size: 14px;
+}
+
+.succes ~ .progress-bar-wrapper {
+  background-color: #27AE60 !important;
+}
+
+@media (min-width: 375px) {
+  .progress-bar__text {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+
+@media (min-width: 600px) {
+  .progress-bar__text {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .module-top__progress {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 1001px) {
+  .body__wrapper {
+    width: calc(100% - 70px);
+    margin-left: 70px;
+  }
+  .body__content {
+    margin-left: 40px;
+  }
+  .header__box {
+    padding: 20px 0 0 60px;
+    height: 100px;
+    background-color: white;
+  }
+  .header__box h3 {
+    font-size: 37px;
+    -webkit-transform: translate(0px, 15px);
+    -ms-transform: translate(0px, 15px);
+    transform: translate(0px, 15px);
+  }
+}
+
+@media (min-width: 1400px) {
   .tabs__wrapper {
     width: 1181px;
   }

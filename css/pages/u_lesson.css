@@ -1507,6 +1507,15 @@ a {
   }
 }
 
+@media (min-width: 692px) {
+  .body__wrapper {
+    width: 100%;
+  }
+  .body__content {
+    width: 100%;
+  }
+}
+
 @media (min-width: 768px) {
   .fancybox-content {
     position: relative;

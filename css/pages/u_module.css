@@ -955,9 +955,12 @@ a {
 
 @media (min-width: 500px) {
   .lessons-column__title {
-    -webkit-transform: translateX(-10px);
-    -ms-transform: translateX(-10px);
-    transform: translateX(-10px);
+    -webkit-transform: translateX(-6px);
+    -ms-transform: translateX(-6px);
+    transform: translateX(-6px);
+  }
+  .lessons-column__title .title {
+    font-size: 20px;
   }
   .lb:first-child {
     margin-right: 10px;
