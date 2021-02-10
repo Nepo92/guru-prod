@@ -7,26 +7,15 @@
 
   <title>Мои курсы</title>
 
-  <!-- <link th:href="@{/css/u_main.css}" rel="stylesheet">
-  <link th:href="@{/css/gap.css}" rel="stylesheet">
-  <link th:href="@{/css/custom-tabs.css}" rel="stylesheet">
-  <link th:href="@{/css/available-course.css}" rel="stylesheet">
-  <link th:href="@{/css/info-blocks.css}" rel="stylesheet">
-  <link th:href="@{/css/progress-bar.css}" rel="stylesheet">
-  <link th:href="@{/css/btn.css}" rel="stylesheet">
-  <link th:href="@{/css/main-nav.css}" rel="stylesheet"> -->
-
-  <link href="../css/u_main.css" rel="stylesheet">
-  <link href="../css/gap.css" rel="stylesheet">
-  <link href="../css/custom-tabs.css" rel="stylesheet">
-  <link href="../css/available-course.css" rel="stylesheet">
-  <link href="../css/info-blocks.css" rel="stylesheet">
-  <link href="../css/progress-bar.css" rel="stylesheet">
-  <link href="../css/btn.css" rel="stylesheet">
-  <link href="../css/main-nav.css" rel="stylesheet">
-
-  <link href="../css/pages/u_courses.css" rel="stylesheet">
-
+  <link th:href="@{../../css/u_main.css}" rel="stylesheet">
+  <link th:href="@{../../css/gap.css}" rel="stylesheet">
+  <link th:href="@{../../css/custom-tabs.css}" rel="stylesheet">
+  <link th:href="@{../../css/available-course.css}" rel="stylesheet">
+  <link th:href="@{../../css/info-blocks.css}" rel="stylesheet">
+  <link th:href="@{../../css/progress-bar.css}" rel="stylesheet">
+  <link th:href="@{../../css/btn.css}" rel="stylesheet">
+  <link th:href="@{../../css/main-nav.css}" rel="stylesheet">
+  <link th:href="@{../../css/pages/u_courses.css}" rel="stylesheet">
 </head>
 
 <!-- onload="getCountdownOnUserCoursesPage()" -->
@@ -68,7 +57,7 @@
                 <div class="avatar">
                   <div class="avatar__wrapper avatar__wrapper_xsmall">
                     <span class="avatar-image avatar-image_default mobile-menu__avatar">
-                      <img src="../img/menu/image13.png" alt="avatar">
+                      <img src="../../img/menu/image13.png" alt="avatar">
                     </span>
                   </div>
                 </div>
@@ -89,7 +78,7 @@
                 <div class="avatar">
                   <div class="avatar__wrapper avatar__wrapper_large">
                     <span class="avatar-image avatar-image_large avatar-image_default">
-                      <img src="../img/menu/image13.png" alt="avatar">
+                      <img src="../../img/menu/image13.png" alt="avatar">
                     </span>
                   </div>
                 </div>
@@ -162,7 +151,7 @@
               <div class="avatar">
                 <div class="avatar__wrapper avatar__wrapper_large">
                   <span class="avatar-image avatar-image_large avatar-image_default menu__avatar">
-                    <img src="../img/menu/image13.png" alt="avatar">
+                    <img src="../../img/menu/image13.png" alt="avatar">
                   </span>
                 </div>
               </div>
@@ -280,7 +269,7 @@
                               </div>
                             </div>
 
-                            <img src="../img/SweetsAcademy.svg" alt="sweetsAcademy">
+                            <img src="../../img/SweetsAcademy.svg" alt="sweetsAcademy">
                           </div>
 
                           <div class="available-course__title -gap_2 courses__title">Пряники Домашние</div>
@@ -325,7 +314,7 @@
                         </div>
                         <div class="available-course__side">
                           <div class="available-course__image courses__image">
-                            <img src="../img/bg.png" alt="bg">
+                            <img src="../../img/bg.png" alt="bg">
                           </div>
                         </div>
                       </div>
@@ -349,7 +338,7 @@
                               </div>
                             </div>
 
-                            <img src="../img/SweetsAcademy.svg" alt="sweetsAcademy">
+                            <img src="../../img/SweetsAcademy.svg" alt="sweetsAcademy">
                           </div>
 
                           <div class="available-course__title -gap_2 courses__title">Пряники Домашние</div>
@@ -393,7 +382,7 @@
 
                         <div class="available-course__side">
                           <div class="available-course__image courses__image">
-                            <img src="../img/bg.png" alt="bg">
+                            <img src="../../img/bg.png" alt="bg">
                           </div>
                         </div>
                       </div>
@@ -419,7 +408,7 @@
           </div>
 
           <div class="popup__avatar">
-            <img src="../img/" alt="avatar">
+            <img src="../../img/image13.png" alt="avatar">
             <a href=".">Изменить аватар</a>
           </div>
 
@@ -464,22 +453,12 @@
     </div>
   </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="../js/_tabby.js"></script>
-  <script src="../js/tabs.js"></script>
-  <script src="../js/main.js"></script>
-  <script src="../js/progress-bar.js"></script>
-  <script src="../js/countdown.js"></script>
-  <script src="../js/menu-nav.js"></script>
-
+  <th:block th:insert="base :: jquery" />
+  <script th:src="@{../../js/_tabby.js}"></script>
+  <script th:src="@{../../js/tabs.js}"></script>
+  <script th:src="@{../../js/progress-bar.js}"></script>
+  <script th:src="@{../../js/countdown.js}"></script>
+  <script th:src="@{../../js/menu-nav.js}"></script>
 </body>
-
-
-
-<!-- <th:block th:insert="base :: jquery" />
-<script th:src="@{/js/_tabby.js}"></script>
-<script th:src="@{/js/tabs.js}"></script>
-<script th:src="@{/js/progress-bar.js}"></script>
-<script th:src="@{/js/countdown.js}"></script> -->
 
 </html>
