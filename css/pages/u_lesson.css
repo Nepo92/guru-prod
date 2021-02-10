@@ -718,13 +718,16 @@ a {
   }
 }
 
+.gallery-item .gallery-item_small {
+  margin-left: 10px;
+}
+
 .gallery-item .gallery-item_small img {
   width: 100%;
   height: auto;
 }
 
 .gallery-item {
-  margin-left: 0px;
   -webkit-transform: translateX(10px);
   -ms-transform: translateX(10px);
   transform: translateX(10px);
