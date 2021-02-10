@@ -1521,7 +1521,7 @@ a {
 
 .module-about__inner img {
   position: absolute;
-  top: 20px;
+  top: 25px;
   right: 20px;
   width: 35px;
   height: 24px;
@@ -2189,7 +2189,7 @@ a {
 
 .sertifikat__header {
   width: 100%;
-  font-size: 14px;
+  font-size: 18px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2235,7 +2235,7 @@ a {
 .sertifikat__btn svg {
   width: 15px;
   height: 16px;
-  margin-right: 16px;
+  margin-right: 5px;
   fill: #481E8C;
 }
 
@@ -2734,6 +2734,9 @@ a {
     -ms-flex-pack: center;
     justify-content: center;
     padding: 0;
+  }
+  .sertifikat__btn svg {
+    margin-right: 16px;
   }
   .sertifikat__estimation {
     font-size: 20px;

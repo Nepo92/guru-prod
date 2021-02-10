@@ -16,12 +16,16 @@
     <link href="../css/btn.css" rel="stylesheet">
     <link href="../css/main-nav.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="./css/pages/a_about-company.css">
+
 </head>
 
 <body>
     <div th:replace="base :: main-nav"></div>
 
       <!-- Мобильное меню -->
+
+  <!-- Мобильное меню -->
 
   <div class="mobile-nav">
     <div class="mobile-nav__box block menu__inner mobile-menu">
@@ -70,7 +74,7 @@
 
         <div class="main-nav__logo open-mobile-menu__logo menu__avatar nav__info">
           <div class="main-nav__item-wrapper open-mobile-menu__item-wrapper">
-            <div class="main-nav__item-wrapper nav__item active nav__item-name">
+            <div class="main-nav__item-wrapper nav__item  nav__item-name">
               <div class="main-nav__avatar menu__avatar">
                 <div class="avatar">
                   <div class="avatar__wrapper avatar__wrapper_large">
@@ -104,19 +108,27 @@
             </a>
           </div>
 
-          <div class="main-nav__items-wrapper nav__item">
+          <div class="main-nav__items-wrapper nav__item nav__item">
             <a href="/user/courses/" class="main-nav__item-wrapper">
-              <div class="main-nav__item main-nav__item_dashboard  main-nav__item_active">
+              <div class="main-nav__item main-nav__item_dashboard  main-nav__item_active  nav__icon">
               </div>
               <div class="main-nav__item-title">Мои курсы</div>
+            </a>
+          </div>
+
+          <div class="main-nav__items-wrapper nav__item nav__item">
+            <a data-type="settings" href="/user/courses/" class="main-nav__item-wrapper active ">
+              <div class="main-nav__item main-nav__item_dashboard  main-nav__item_active user-settings nav__icon">
+              </div>
+              <div class="main-nav__item-title">Мои настройки</div>
             </a>
           </div>
 
           <div class=" open-mobile-menu__exit nav__item">
             <a href="/logout" class="main-nav__item-wrapper">
               <div class="main-nav__item main-nav__item_exit nav__icon">
-            </div>
-            <div class=" main-nav__item-title">Выйти из аккаунта</div>
+              </div>
+              <div class=" main-nav__item-title">Выйти из аккаунта</div>
             </a>
           </div>
         </div>
@@ -135,7 +147,7 @@
 
       <div class="main-nav__logo">
         <div class="main-nav__item-wrapper">
-          <div class="main-nav__item-wrapper">
+          <div class="main-nav__item-wrapper menu__nav-item">
             <div class="main-nav__avatar">
               <div class="avatar">
                 <div class="avatar__wrapper avatar__wrapper_large">
@@ -153,16 +165,26 @@
       </div>
 
       <div class="main-nav__list-items">
-        <div class="main-nav__items-wrapper">
-          <div class="main-nav__items-wrapper">
-            <a href="/user/courses/" class="main-nav__item-wrapper">
-              <div class="main-nav__item main-nav__item_dashboard  main-nav__item_active"></div>
-              <div class="main-nav__item-title">Мои курсы</div>
-            </a>
-          </div>
+
+        <div class="main-nav__items-wrapper nav__item">
+          <a data-type="settings" href="/user/courses/" class="main-nav__item-wrapper">
+            <div class="main-nav__item main-nav__item_dashboard nav__settings main-nav__item_active">
+            </div>
+            <div class="main-nav__item-title">Мои Курсы</div>
+          </a>
         </div>
 
-        <div class="main-nav__items-wrapper">
+
+
+        <div class="main-nav__items-wrapper nav__item">
+          <a data-type="settings" href="/user/courses/" class="main-nav__item-wrapper">
+            <div class="main-nav__item main-nav__item_dashboard nav__settings user-settings main-nav__item_active">
+            </div>
+            <div class="main-nav__item-title">Мои настройки</div>
+          </a>
+        </div>
+
+        <div class="main-nav__items-wrapper nav__item">
           <a href="/logout" class="main-nav__item-wrapper">
             <div class="main-nav__item main-nav__item_exit"></div>
             <div class="main-nav__item-title">Выход</div>
@@ -173,12 +195,52 @@
   </div>
 
     <!--<div class="main-content main-content_pl40">-->
-    <div class="main-content">
+    <div class="main-content container">
+
+
+      <header class="header">
+        <div class="header__box block">
+
+          <div class="header__wrapper block-wrapper">
+
+            <div class="header__main">
+              <div class="header__items">
+
+                <div class="header__items-wrapper">
+
+                  <div class="header__item header__item_title">
+                    <h3>Мои курсы</h3>
+                  </div>
+
+                </div>
+
+                <ul class="header__items-wrapper header-tabs">
+                  <li class="header-tabs__item">База знаний</li>
+                  <li class="header-tabs__item">Команда</li>
+                  <li class="header-tabs__item">Контакты</li>
+                  <li class="header-tabs__item">Обучающий центр</li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <ul class="filtr__list">
+        <li class="filtr__item">Корпоративы<span class="filtr__del"></span></li>
+        <li class="filtr__item">Отчеты<span class="filtr__del"></span></li>
+        <li class="filtr__item">События<span class="filtr__del"></span></li>
+      </ul>
+
+      <div class="block-delimiter"></div>
+
         <!--<div th:replace="base :: a-corporate-center-nav"></div>-->
         <div class="content-top content-top_btn">
             <div type="all" js-type class="content-top__header" th:utext="${title}"></div>
             <div js-create-theme class="add-button add-button_right add-button_violet">+ Добавить раздел</div>
         </div>
+
         <div class="content-main theme-container">
             <th:block th:each="theme, counter : ${articles}">
 
@@ -210,6 +272,9 @@
                         </div>
                     </div>
                 </th:block>
+
+          
+
 
                 <th:block th:if="${theme.key.editable}">
                     <div class="theme" th:attr="data-theme=${theme.key.id}">

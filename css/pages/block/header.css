@@ -1,0 +1,13 @@
+@media (min-width: 1001px) {
+  .header__box {
+    padding: 20px 0 0 60px;
+    height: 100px;
+    background-color: white;
+  }
+  .header__box h3 {
+    font-size: 37px;
+    -webkit-transform: translate(0px, 15px);
+    -ms-transform: translate(0px, 15px);
+    transform: translate(0px, 15px);
+  }
+}
