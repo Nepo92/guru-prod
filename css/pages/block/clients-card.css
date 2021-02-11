@@ -59,6 +59,9 @@ a {
 
 .clients__icon {
   display: inline-block;
+}
+
+.clients__fb {
   cursor: pointer;
 }
 
