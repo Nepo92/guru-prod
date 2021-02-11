@@ -59,6 +59,7 @@ a {
 
 .clients__icon {
   display: inline-block;
+  cursor: pointer;
 }
 
 .clients__fb:nth-child(1) {
@@ -99,6 +100,10 @@ a {
 
 .clients__field:first-child {
   margin-top: 0;
+}
+
+.clients__field a:hover {
+  text-decoration: underline;
 }
 
 .clients__vk {
