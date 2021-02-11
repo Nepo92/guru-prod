@@ -20,18 +20,18 @@
     <link th:href="@{../../css/main-nav.css}" rel="stylesheet">
     <link th:href="@{../../css/pages/u_lesson.css}" rel="stylesheet"> -->
 
-    <link href="../../css/u_main.css" rel="stylesheet">
-    <link href="../../css/gap.css" rel="stylesheet">
-    <link href="../../css/custom-tabs.css" rel="stylesheet">
-    <link href="../../css/available-course.css" rel="stylesheet">
-    <link href="../../css/info-blocks.css" rel="stylesheet">
-    <link href="../../css/progress-bar.css" rel="stylesheet">
-    <link href="../../css/jquery.fancybox.min.css" rel="stylesheet">
-    <link href="../../css/btn.css" rel="stylesheet">
-    <link href="../../css/gallery-block.css" rel="stylesheet">
-    <link href="../../css/comment-block.css" rel="stylesheet">
-    <link href="../../css/main-nav.css" rel="stylesheet">
-    <link href="../../css/pages/u_lesson.css" rel="stylesheet"> 
+    <link href="../css/u_main.css" rel="stylesheet">
+    <link href="../css/gap.css" rel="stylesheet">
+    <link href="../css/custom-tabs.css" rel="stylesheet">
+    <link href="../css/available-course.css" rel="stylesheet">
+    <link href="../css/info-blocks.css" rel="stylesheet">
+    <link href="../css/progress-bar.css" rel="stylesheet">
+    <link href="../css/jquery.fancybox.min.css" rel="stylesheet">
+    <link href="../css/btn.css" rel="stylesheet">
+    <link href="../css/gallery-block.css" rel="stylesheet">
+    <link href="../css/comment-block.css" rel="stylesheet">
+    <link href="../css/main-nav.css" rel="stylesheet">
+    <link href="../css/pages/u_lesson.css" rel="stylesheet"> 
 
 </head>
 
@@ -110,7 +110,7 @@
 
                       <div class="content-element__video-wrapper">
                         <a data-fancybox th:href="${lessonBlock.value}" class="content-video">
-                          <img src="../../img/lesson.png" alt="">
+                          <img src="../img/lesson.png" alt="">
                         </a>
                       </div>
                     </div>
@@ -293,7 +293,7 @@
                     <div class="content-element__image lesson-image__img">
                       <div class="content-element__image-wrapper">
                         <a data-fancybox th:href="'/' + ${lessonBlock.value}" class="content-image">
-                          <img src="../../img/lesson.png" alt="">
+                          <img src="../img/lesson.png" alt="">
                         </a>
                       </div>
                     </div>
@@ -327,7 +327,7 @@
                                   <a data-fancybox th:href="'/' + ${img.value}" class="galleryitem">
                                     <div class="gallery-item__preview works__img"
                                       th:style="'background-image: url(/' + ${img.value} + ');'">
-                                      <img src="../../img/lesson.png" alt="">
+                                      <img src="../img/lesson.png" alt="">
                                     </div>
                                   </a>
                                 </div>
@@ -486,7 +486,7 @@
                                     <!--                                                            </div>-->
                                     <div class="comment__header-item">
                                       <div class="comment__title">
-                                        <img class="comment__avatar" src="../../img/image13.png" alt="">
+                                        <img class="comment__avatar" src="../img/image13.png" alt="">
                                         <span class="comment__author">Автор</span>
                                       </div>
                                     </div>
@@ -510,7 +510,7 @@
                                                   <!-- <img class="gallery-item__preview"
                                                     th:src="${'/' + homeworkFile.path}"> -->
 
-                                                    <img src="../../img/bg.png" alt="">
+                                                    <img src="../img/bg.png" alt="">
                                                 </a>
                                               </div>
                                             </th:block>
@@ -542,7 +542,7 @@
                                     <!--                                                            </div>-->
                                     <div class="comment__header-item">
                                       <div class="comment__title">
-                                        <img class="comment__avatar" src="../../img/image13.png" alt="">
+                                        <img class="comment__avatar" src="../img/image13.png" alt="">
                                         <span class="comment__author">Автор <span
                                             class="comment__author--lightgray">Куратор</span></span>
                                       </div>
@@ -565,7 +565,7 @@
                                                   <!-- <img class="gallery-item__preview comment__files"
                                                     th:src="${'/' + homeworkFile.path}" alt="files"> -->
 
-                                                    <img src="../../img/bg.png" alt="">
+                                                    <img src="../img/bg.png" alt="">
                                                 </a>
                                               </div>
                                             </th:block>
@@ -631,7 +631,7 @@
           </div>
 
           <div class="popup__avatar">
-            <img src="../../img/image13.png" alt="avatar">
+            <img src="../img/image13.png" alt="avatar">
             <a href=".">Изменить аватар</a>
           </div>
 
@@ -677,13 +677,13 @@
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="../../js/main.js"></script>
-  <script src="../../js/jquery.fancybox.min.js"></script>
-  <script src="../../js/progress-bar.js"></script>
-  <script src="../../js/lesson-vote.js"></script>
-  <script src="../../js/upload-item-files.js"></script>
-  <script src="../../js/homework.js"></script> 
-  <script src="../../js/main-nav.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/jquery.fancybox.min.js"></script>
+  <script src="../js/progress-bar.js"></script>
+  <script src="../js/lesson-vote.js"></script>
+  <script src="../js/upload-item-files.js"></script>
+  <script src="../js/homework.js"></script> 
+  <script src="../js/main-nav.js"></script>
 
   <!-- <th:block th:insert="base :: jquery" />
 <script th:src="@{../../js/main.js}"></script>
